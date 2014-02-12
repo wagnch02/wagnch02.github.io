@@ -21,41 +21,8 @@
 	<li>former resident of Alexandria, MN</li>
 </ul>
 
-<dl>
-    <dt><strong>Chris is a...</strong></dt><dd>senior at Luther College</dd>
-    <dt><strong>http</strong></dt><dd>Hyper Text Transfer Protocol. The language of web servers and browsers.</dd>
-</dl>
-<p>Sometimes you want to include code that you don't want rendered by the browser.  In that case use a &lt;pre&gt; tag.</p>
-<pre>
-    for i in range(10):
-        print("hello world")
-</pre>
-
-<p>Now, if you want to make some changes to these do the following:</p>
-<pre>
-    git checkout -b mychanges
-</pre>
-<p>This makes a local branch for you to play with.  Once you are done making the suggested changes do this:</p>
-<pre>
-    git commit -m 'These are my changes'
-</pre>
-<p>Now if you check the page in the browser you should see your changes.  To get back to my page without your changes do this:</p>
-<pre>
-    git checkout master
-</pre>
-<p>Now when you refresh your changes are gone.</p>
-<pre>
-    git checkout mychanges
-</pre>
-<p>Now they are back again.</p>
-
-<p>Of course, nobody wants a web page without an image on it.  <img src="biker_shadow.jpg" /> Notice that there is no &lt;/img&gt; tag.  The image tag closes itself with the slash at the end as there is no reason to have anything between the open and the close.</p>
-
-<p>Well thats a bit big.  See if you can figure out how to scale the image to a more appropriate size.</p>
-
-<p>What makes the web great is the ability to link from one page to the next.  You can link to a page on a completely different site, like this: <a href="http://knuth.luther.edu/~bmiller/page2.html">On knuth</a></p>
+<p><a href="http://knuth.luther.edu/~bmiller/page2.html">On knuth</a></p>
 <p><a href="hobbies.html">Hobbies</a></p>
 
-When you are developing a web page, it is easy to run a python program as a simple web server.  Make sure your working directory is the directory that has your files in it, and then run <code>python3 -m http.server</code>  This will start a webserver on port 8000.  To bring up this page in your browser (running on the same machine) try this:  <code>http://localhost:8000/first.html</code>
 </body>
 </html>

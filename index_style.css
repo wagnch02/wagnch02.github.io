@@ -16,6 +16,10 @@ html {
     background:#ddd;
 }
 
+#nav {
+    background:#c99;
+}
+
 #main {
     float:left;
 	width:375px;

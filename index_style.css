@@ -7,7 +7,7 @@ html {
 }
 
 #wrap {
-    width:850px;
+    width:790px;
 	margin:0 auto;
 	background#99c;
 }
@@ -15,6 +15,7 @@ html {
 #header {
     padding:5px 10px;
     background:#ddd;
+	text-align:center;
 }
 
 h1 {
@@ -24,6 +25,7 @@ h1 {
 #nav {
     padding:5px 10px;
     background:#c99;
+	text-align:center;
 }
 
 #nav ul {

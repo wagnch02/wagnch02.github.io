@@ -20,6 +20,17 @@ html {
     background:#c99;
 }
 
+#nav ul {
+    margin:0;
+	padding:0;
+	list-style:none;
+}
+
+#nav li {
+    display:inline;
+	margin:0;
+	padding:0;
+
 #main {
     float:left;
 	width:375px;

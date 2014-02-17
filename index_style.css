@@ -13,10 +13,16 @@ html {
 }
 
 #header {
+    padding:5px 10px;
     background:#ddd;
 }
 
+h1 {
+    margin:0;
+}
+
 #nav {
+    padding:5px 10px;
     background:#c99;
 }
 
@@ -35,6 +41,7 @@ html {
 #main {
     float:left;
 	width:375px;
+	padding:10px;
     background:#9c9;
 }
 
@@ -42,10 +49,16 @@ html {
     float:right;
 	width:375px;
 	height:250px;
+	padding:10px;
     background:#c9c;
 }
 
 #footer {
     clear:both;
+	padding:5px 10px;
     background:#cc9;
+}
+
+#footer p {
+    margin:0;
 }

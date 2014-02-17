@@ -7,7 +7,7 @@ html {
 }
 
 #wrap {
-    width:1000px;
+    width:925px;
 	margin:0 auto;
 	background#99c;
 }
@@ -49,8 +49,8 @@ h1 {
 
 #sidebar {
     float:right;
-	width:450px;
-	height:500px;
+	width:375px;
+	height:330px;
 	padding:25px;
     background:#c9c;
 }

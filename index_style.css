@@ -7,7 +7,7 @@ html {
 }
 
 #wrap {
-    width:1500px;
+    width:1000px;
 	margin:0 auto;
 	background#99c;
 }
@@ -42,14 +42,14 @@ h1 {
 
 #main {
     float:left;
-	width:700px;
+	width:450px;
 	padding:25px;
     background:#9c9;
 }
 
 #sidebar {
     float:right;
-	width:700px;
+	width:450px;
 	height:500px;
 	padding:25px;
     background:#c9c;

@@ -25,6 +25,7 @@ html {
 #sidebar {
     float:right;
 	width:375px;
+	height:250px;
     background:#c9c;
 }
 

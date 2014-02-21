@@ -1,17 +1,24 @@
 #title {
     background-color: #DDD;
+	text-align:center;
 }
 
 #WoW {
     background-color: #DD0;
+	text-align:center;
+	float:left;
 }
 
 #horn {
-    background-color: #D0D;
+    background-color: #rgb(100,10,90);
+	text-align:center;
+	float:right;
 }
 
 #sleep {
     background-color: #EEE;
+	text-align:center;
+	float:right;
 }
 
 body {

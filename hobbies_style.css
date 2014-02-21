@@ -7,18 +7,21 @@
     background-color: #DD0;
 	text-align:center;
 	float:left;
+	padding:25px;
 }
 
 #horn {
-    background-color: #rgb(100,10,90);
+    background-color:rgb(100,10,90);
 	text-align:center;
 	float:right;
+	padding:25px;
 }
 
 #sleep {
     background-color: #EEE;
 	text-align:center;
 	float:right;
+	padding:25px;
 }
 
 body {

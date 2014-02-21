@@ -1,3 +1,8 @@
+#wrap {
+	margin:0 auto;
+	background:#99c;
+}
+
 #title {
     background-color: #DDD;
 	text-align:center;
@@ -14,6 +19,8 @@
     background-color:rgb(90,50,90);
 	text-align:center;
 	float:right;
+	height:200px;
+	width:200px;
 	padding:25px;
 }
 

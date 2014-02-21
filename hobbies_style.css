@@ -1,0 +1,33 @@
+#title {
+    background-color: #DDD;
+    height: 150px;
+}
+
+#WoW {
+    background-color: #DD0;
+    height: 150px;
+}
+
+#horn {
+    background-color: #D0D;
+    height: 150px;
+}
+
+#sleep {
+    background-color: #EEE;
+    height: 150px;
+}
+
+body {
+    padding-top: 50px;
+}
+
+@media (max-width: 480px) { 
+        body {
+          font-size: 20px;
+        }
+
+        .hidden-phone {
+           display: block;
+        }
+    }

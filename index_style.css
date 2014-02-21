@@ -9,14 +9,12 @@ html {
 #wrap {
 	margin:0 auto;
 	background:#99c;
-	background-color:rgb(100,0,125);
 }
 
 #header {
     padding:5px 10px;
     background:#ddd;
 	text-align:center;
-	background-color:rgb(100,0,125);
 }
 
 h1 {
@@ -27,7 +25,6 @@ h1 {
     padding:5px 10px;
     background:#c99;
 	text-align:center;
-	background-color:rgb(100,0,125);
 }
 
 #nav ul {
@@ -46,7 +43,6 @@ h1 {
     float:left;
 	padding:25px;
     background:#9c9;
-	background-color:rgb(100,0,125);
 }
 
 #sidebar {
@@ -54,7 +50,6 @@ h1 {
 	height:330px;
 	padding:25px;
     background:#c9c;
-	background-color:rgb(100,0,125);
 }
 
 #footer {
@@ -62,7 +57,6 @@ h1 {
 	padding:10px 20px;
     background:#cc9;
 	text-align:center;
-	background-color:rgb(100,0,125);
 }
 
 #footer p {

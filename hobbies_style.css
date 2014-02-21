@@ -11,7 +11,7 @@
 }
 
 #horn {
-    background-color:rgb(100,10,90);
+    background-color:rgb(90,50,90);
 	text-align:center;
 	float:right;
 	padding:25px;
@@ -22,10 +22,12 @@
 	text-align:center;
 	float:right;
 	padding:25px;
+	clear:both;
 }
 
 body {
     padding-top: 50px;
+	color:#000;
 }
 
 @media (max-width: 480px) { 

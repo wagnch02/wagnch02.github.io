@@ -10,8 +10,6 @@ hello = function() {
 myCounter = 0
 factors = function() {
     var newList = document.createElement('ul')
-	var newItem = document.createElement('li')
-    document.getElementById("count").appendChild(newItem)
     //var newp = document.getElementById("count");
     //myCounter = myCounter +1;    
 	var myVal = document.getElementById("myInt").value;
@@ -22,7 +20,8 @@ factors = function() {
 	var start = 2;
 	while (myVal > 1) {
 	   while (myVal % start == 0) {
-	      //list stuff
+	      var newItem = document.createElement('li')
+          document.getElementById("count").appendChild(newItem)
 		  myVal /= start;
 		  newItem.innerHTML = start;
 	   }

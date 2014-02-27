@@ -19,7 +19,7 @@ factors = function() {
 	var ele = document.getElementById("count");
 	if (ele) {
 	   while (ele.firstChild) {
-	      ele.removeChild(ele.firstChild));
+	      ele.removeChild(ele.firstChild);
 	   }
 	}
 	

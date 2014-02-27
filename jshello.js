@@ -14,9 +14,21 @@ factors = function() {
     document.getElementById("count").appendChild(newItem)
     //var newp = document.getElementById("count");
     //myCounter = myCounter +1;    
-    newItem.innerHTML = document.getElementById("myInt").value;
+	var myVal = document.getElementById("myInt").value;
+    //newItem.innerHTML = myVal;
     newItem.style.fontSize = "25px";
     newItem.style.color="red";
+	
+	var start = 2;
+	while (myVal > 1) {
+	   while (myVal % start == 0) {
+	      //list stuff
+		  myVal /= start;
+		  newItem.innerHTML = start;
+	   }
+	   start = start + 1;
+	}
+	
 }
 
 window.onload = hello

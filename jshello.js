@@ -14,8 +14,8 @@ factors = function() {
     //myCounter = myCounter +1;    
 	var myVal = document.getElementById("myInt").value;
     //newItem.innerHTML = myVal;
-    newItem.style.fontSize = "25px";
-    newItem.style.color="red";
+    //newItem.style.fontSize = "25px";
+    //newItem.style.color="red";
 	
 	var start = 2;
 	while (myVal > 1) {

@@ -24,7 +24,7 @@ factors = function() {
 	      //var newItem = document.createElement('li')
           //document.getElementById("count").appendChild(newItem)
 		  myVal /= start;
-		  newItem.innerHTML = start;
+		  //newItem.innerHTML = start;
 		  insertItem(start, "item"+start);
 	   }
 	   start = start + 1;

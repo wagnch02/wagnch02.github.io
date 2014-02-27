@@ -9,14 +9,14 @@ hello = function() {
 // this is a single line comment
 myCounter = 0
 factors = function() {
-    var newp = document.createElement('p')
-    document.getElementById("count").appendChild(newp)
+    var newList = document.createElement('ul')
+	var newItem = document.createElement('li')
+    document.getElementById("count").appendChild(newItem)
     //var newp = document.getElementById("count");
     //myCounter = myCounter +1;    
-    newp.innerHTML = document.getElementById("myInt").value;
-    newp.style.fontSize = "33px";
-    
-    newp.style.color="red";
+    newItem.innerHTML = document.getElementById("myInt").value;
+    newItem.style.fontSize = "25px";
+    newItem.style.color="red";
 }
 
 window.onload = hello

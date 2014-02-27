@@ -16,8 +16,15 @@ factors = function() {
     //newItem.innerHTML = myVal;
     //newItem.style.fontSize = "25px";
     //newItem.style.color="red";
+	var ele = document.getElementById("count");
+	if (ele) {
+	   while (ele.firstChild) {
+	      ele.removeChild(ele.firstChild));
+	   }
+	}
 	
 	var start = 2;
+	var lastInt = 0;
 	while (myVal > 1) {
 	   while (myVal % start == 0) {
 	      
@@ -25,7 +32,10 @@ factors = function() {
           //document.getElementById("count").appendChild(newItem)
 		  myVal /= start;
 		  //newItem.innerHTML = start;
-		  insertItem(start, "item"+start);
+		  if (start != lastInt) {
+		     insertItem(start, "item"+start);
+		  }
+		  lastInt = start;
 	   }
 	   start = start + 1;
 	}

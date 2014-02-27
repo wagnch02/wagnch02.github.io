@@ -13,7 +13,7 @@ myCounter = 0
 factors = function() {
     var newp = document.getElementById("count");
     myCounter = myCounter +1;    
-    newp.innerHTML = myCounter
+    newp.innerHTML = document.getElementById("myInt").value;
     newp.style.fontSize = myCounter+"px";
     if (newp.style.color=="blue") {
         newp.style.color="red";

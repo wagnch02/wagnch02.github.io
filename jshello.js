@@ -20,14 +20,24 @@ factors = function() {
 	var start = 2;
 	while (myVal > 1) {
 	   while (myVal % start == 0) {
-	      var newItem = document.createElement('li')
-          document.getElementById("count").appendChild(newItem)
+	      
+	      //var newItem = document.createElement('li')
+          //document.getElementById("count").appendChild(newItem)
 		  myVal /= start;
 		  newItem.innerHTML = start;
+		  insertItem(start, "item"+start);
 	   }
 	   start = start + 1;
 	}
 	
 }
+
+insertItem = function(value, newListItem) {
+   var ul = document.getElementById("count");
+   var li = document.createElement("li");
+   li.innerHTML = value;
+   ul.appendChild(li);
+}
+
 
 window.onload = hello

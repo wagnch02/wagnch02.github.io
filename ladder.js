@@ -31,6 +31,8 @@ ladder = function() {
 	
 	while (start != myVal2) {
 	   insertItem(length);
+	   insertItem(myVal);
+	   insertItem(myVal2);
 	   start = myVal2;
 	}
 	

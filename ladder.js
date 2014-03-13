@@ -17,6 +17,7 @@ ladder = function() {
 	      ele.removeChild(ele.firstChild);
 	   }
 	}
+	var foundStack = new Stack();
 	
 	var runningVal = myVal;
 	var found = false;
@@ -48,8 +49,17 @@ ladder = function() {
 	   for (var i = 0; i < myQ.getLength(); i++) {
 	      var stack = new Stack();
 		  stack = myQ.getItem(i);
-		  for (var i2 = 0; i2 < stack.getLength(); i2++) {
-		     insertItem(stack.getItem(i2));
+		  usedSet.add(stack.getItem(stack.getLength()-1));
+		  if (stack.getItem(stack.getLength()-1) == myVal2) {
+		     foundStack = stack;
+			 found = true;
+			 reachedEnd = true;
+		  }
+	   }
+	   
+	   if (found == true) {
+	      for (var i = 0; i < foundStack.getLength()-1; i++) {
+		     insertItem(foundStack.getItem(i));
 		  }
 	   }
 	/*

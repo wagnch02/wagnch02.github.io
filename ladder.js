@@ -125,9 +125,9 @@ searchWords = function(currentWord, currentStack, wordLen, wordDict, usedWordSet
          }
 	  }
 	  if (difCount == 1) {
+	    var usedSet = new Set();
+        usedSet = usedWordSet;
 	    if (usedSet.doesNotContain(words[i])) {
-		   var usedSet = new Set();
-           usedSet = usedWordSet;
 		   var stack = new Stack();
 		   stack = newStack;
 		   stack=stack.push(words[i]);

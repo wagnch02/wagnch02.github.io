@@ -74,14 +74,10 @@ ladder = function() {
 	      checkQ = new Queue();
 		  checkQ = myQ;
 	      myQ = searchWords(runningVal, firstStack, length, words, usedSet, checkQ);
-		  if (checkQ == myQ) {
-		     reachedEnd = true;
-			 insertItem("exhausted");
-		  }
 		  for (var i = 0; i < myQ.getLength(); i++) {
 	         var stack = new Stack();
 		     stack = myQ.getItem(i);
-		     usedSet.add(stack.getItem(stack.getLength()-1));
+		     usedSet = usedSet.add(stack.getItem(stack.getLength()-1));
 		     if (stack.getItem(stack.getLength()-1) == myVal2) {
 		        foundStack = stack;
 			    found = true;

@@ -121,7 +121,6 @@ searchWords = function(currentWord, currentStack, wordLen, wordDict, usedWordSet
 		var stack = new Stack();
 		stack = newStack;
 		stack.push(words[i]);
-		usedSet.add(words[i]);
 	    myQ.queue(stack);
 	  }
 	  difCount = 0;

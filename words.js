@@ -1,4 +1,4 @@
-threeLetterWords = [ 'aln', 'alo', 'all', 'rok', 'alk', 'ore', 'roi', 'alf', 'pep', 'edh',
+var threeLetterWords = [ 'aln', 'alo', 'all', 'rok', 'alk', 'ore', 'roi', 'alf', 'pep', 'edh',
 'ale', 'alb', 'edo', 'vug', 'ala', 'rox', 'roy', 'ugh', 'per', 'aly',
 'ric', 'alt', 'ose', 'alp', 'row', 'ume', 'vet', 'ron', 'auh', 'auk',
 'vow', 'aum', 'pen', 'vee', 'aus', 'tji', 'saw', 'goy', 'rob', 'vei',
@@ -129,7 +129,7 @@ threeLetterWords = [ 'aln', 'alo', 'all', 'rok', 'alk', 'ore', 'roi', 'alf', 'pe
 'tan', 'ago', 'sye', 'age', 'ton', 'eon', 'aga', 'vas', 'ted', 'agy',
 'quo', 'wax', 'tao', 'rep']
 
-fourLetterWords = [ 'fawn', 'foud', 'foun', 'hatt', 'foul', 'wuzu', 'four', 'dern', 'derm', 'whar',
+var fourLetterWords = [ 'fawn', 'foud', 'foun', 'hatt', 'foul', 'wuzu', 'four', 'dern', 'derm', 'whar',
 'punt', 'onym', 'dere', 'hate', 'lias', 'baya', 'lija', 'onus', 'lory', 'spex',
 'ruck', 'swam', 'lepa', 'dazy', 'swan', 'lors', 'atka', 'swat', 'daza', 'bike',
 'lori', 'swap', 'daze', 'lore', 'lord', 'sped', 'toga', 'lora', 'spec', 'bikh',
@@ -630,7 +630,7 @@ fourLetterWords = [ 'fawn', 'foud', 'foun', 'hatt', 'foul', 'wuzu', 'four', 'der
 'chut', 'rule', 'lehr', 'posy', 'eyre', 'yeld', 'kail', 'kaik', 'eyra', 'qung',
 'yell', 'kaid', 'sash', 'buoy']
 
-fiveLetterWords = [ 'xylem', 'toise', 'sonja', 'cobia', 'jihad', 'aegis', 'woody', 'shure', 'lench', 'caner',
+var fiveLetterWords = [ 'xylem', 'toise', 'sonja', 'cobia', 'jihad', 'aegis', 'woody', 'shure', 'lench', 'caner',
 'shurf', 'untie', 'filao', 'scolb', 'scold', 'filar', 'canel', 'buchu', 'hough', 'ecize',
 'subra', 'cutch', 'prize', 'zabti', 'elihu', 'akasa', 'carya', 'caryl', 'elegy', 'sturk',
 'sooty', 'tired', 'zante', 'bacon', 'pulse', 'tirer', 'rusty', 'sooth', 'aweto', 'targe',

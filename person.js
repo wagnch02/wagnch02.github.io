@@ -28,11 +28,5 @@ Person.prototype.birthday = function() {
 	return this.age
 }
 
-x = new Person(9232345, 250, 64, "Chris")
-
-x.gainWeight(33)
-
-console.log(x.birthday())
-
 
 

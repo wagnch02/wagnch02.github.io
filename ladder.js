@@ -73,7 +73,7 @@ ladder = function() {
 	   while(reachedEnd == false) {
 	      checkQ = new Queue();
 		  checkQ = myQ;
-	      myQ = searchWords(runningVal, firstStack, length, words, usedSet, myQ);
+	      myQ = searchWords(runningVal, firstStack, length, words, usedSet, checkQ);
 		  if (checkQ == myQ) {
 		     reachedEnd = true;
 			 insertItem("exhausted");

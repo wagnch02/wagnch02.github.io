@@ -4,13 +4,16 @@ Stack = function() {
 
     this.push = function(item) {
 	   values.push(item);
+	   return values;
     }
 	
 	this.pop = function(item) {
 	   values.pop();
+	   return values;
 	}
 	
 	this.clear = function() {
 	   values.length=0;
+	   return values;
 	}
 }

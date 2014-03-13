@@ -14,5 +14,6 @@ Queue = function() {
 	
 	this.clear = function() {
 	   values.length=0;
+	   return values;
 	}
 }

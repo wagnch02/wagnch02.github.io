@@ -4,6 +4,7 @@ Set = function() {
 
     this.add = function(item) {
 	   values.push(item);
+	   return values;
     }
 	
 	this.contains = function(item) {
@@ -17,5 +18,6 @@ Set = function() {
 	
 	this.clear = function() {
 	   values.length=0;
+	   return values;
 	}
 }

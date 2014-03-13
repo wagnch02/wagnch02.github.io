@@ -23,7 +23,7 @@ ladder = function() {
 	   }
 	}
 	
-	var start = myVal;
+	var runningVal = myVal;
 	var tlw = threeLetterWords;
 	var flw = fourLetterWords;
 	var filw = fiveLetterWords;
@@ -31,12 +31,12 @@ ladder = function() {
 	var myQ = new Queue();
 	myQ = myQ.queue('hi');
 	
-	insertItem(length);
-	insertItem(myVal);
-	insertItem(myVal2);
-	insertItem(myQ[0]);
+	if (myVal.length == length and myVal2.length == length) {
+	   insertItem(myQ[0]);
+	}
+	
 	/*
-	while (start != myVal2) {
+	while (runningVal != myVal2) {
 	   
 	   start = myVal2;
 	}*/

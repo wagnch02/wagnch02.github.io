@@ -1,13 +1,7 @@
 /* This is a comment */
-var tLW= [];
-var fLW= [];
-var fiLW=[];
-$.getScript("words.js", function(){
-   alert("Script loaded and executed.");
-   tLW = threeLetterWords;
-   fLW = fourLetterWords;
-   fiLW = fiveLetterWords;
-});
+var tLW= threeLetterWords;
+var fLW= fourLetterWords;
+var fiLW=fiveLetterWords;
 
 hello = function() {
     //var newh1 = document.createElement('h1')

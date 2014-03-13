@@ -53,7 +53,9 @@ ladder = function() {
 	   for (var i = 0; i < myQ.getLength(); i++) {
 	      var stack = new Stack();
 		  stack = myQ.getItem(i);
-		  insertItem(stack.getItem(stack.getLength()-1));
+		  for (var i2 = 0; i2 < stack.getLength(); i2++) {
+		     insertItem(stack.getItem(i2));
+		  }
 	   }
 	/*
 	   while (reachedEnd == false) {

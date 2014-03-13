@@ -72,9 +72,10 @@ ladder = function() {
 	   } */
 	   while(reachedEnd == false) {
 	      wordSet = new Set();
+		  wordSet = usedSet;
 	      checkQ = new Queue();
 		  checkQ = myQ;
-	      myQ = searchWords(runningVal, firstStack, length, words, usedSet, checkQ);
+	      myQ = searchWords(runningVal, firstStack, length, words, wordSet, checkQ);
 		  for (var i = 0; i < myQ.getLength(); i++) {
 	         var stack = new Stack();
 		     stack = myQ.getItem(i);

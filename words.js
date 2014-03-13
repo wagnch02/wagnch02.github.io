@@ -127,7 +127,7 @@ var threeLetterWords = [ 'aln', 'alo', 'all', 'rok', 'alk', 'ore', 'roi', 'alf',
 'tid', 'tie', 'you', 'nay', 'yor', 'tib', 'tic', 'tam', 'umu', 'urs',
 'rex', 'mes', 'hwa', 'wah', 'ich', 'tec', 'udo', 'yox', 'fop', 'ubi',
 'tan', 'ago', 'sye', 'age', 'ton', 'eon', 'aga', 'vas', 'ted', 'agy',
-'quo', 'wax', 'tao', 'rep']
+'quo', 'wax', 'tao', 'rep'];
 
 var fourLetterWords = [ 'fawn', 'foud', 'foun', 'hatt', 'foul', 'wuzu', 'four', 'dern', 'derm', 'whar',
 'punt', 'onym', 'dere', 'hate', 'lias', 'baya', 'lija', 'onus', 'lory', 'spex',
@@ -628,7 +628,7 @@ var fourLetterWords = [ 'fawn', 'foud', 'foun', 'hatt', 'foul', 'wuzu', 'four', 
 'qere', 'foil', 'stab', 'geck', 'wamp', 'stan', 'waag', 'dhow', 'stam', 'veil',
 'junt', 'vein', 'moxa', 'toad', 'yelt', 'iodo', 'yelp', 'rull', 'oral', 'coyo',
 'chut', 'rule', 'lehr', 'posy', 'eyre', 'yeld', 'kail', 'kaik', 'eyra', 'qung',
-'yell', 'kaid', 'sash', 'buoy']
+'yell', 'kaid', 'sash', 'buoy'];
 
 var fiveLetterWords = [ 'xylem', 'toise', 'sonja', 'cobia', 'jihad', 'aegis', 'woody', 'shure', 'lench', 'caner',
 'shurf', 'untie', 'filao', 'scolb', 'scold', 'filar', 'canel', 'buchu', 'hough', 'ecize',
@@ -1627,4 +1627,4 @@ var fiveLetterWords = [ 'xylem', 'toise', 'sonja', 'cobia', 'jihad', 'aegis', 'w
 'balsa', 'buffy', 'emery', 'subah', 'abbot', 'lieue', 'jenna', 'aramu', 'glint', 'afoam',
 'other', 'glink', 'theow', 'lance', 'urali', 'ctene', 'mulch', 'clift', 'mulct', 'ceryl',
 'ticul', 'humbo', 'cliff', 'octyl', 'jubbe', 'xenos', 'jewel', 'lycus', 'heidi', 'xenon',
-'guzul', 'awake']
+'guzul', 'awake'];

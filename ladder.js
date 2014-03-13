@@ -25,7 +25,7 @@ factors = function() {
 	      ele.removeChild(ele.firstChild);
 	   }
 	}
-	insertItem(tLW[0]);
+	insertItem(threeLetterWords[0]);
 	var start = 2;
 	var lastInt = 0;
 	while (myVal > 1) {

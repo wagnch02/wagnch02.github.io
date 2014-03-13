@@ -1,7 +1,7 @@
 /* This is a comment */
-var tLW= threeLetterWords;
-var fLW= fourLetterWords;
-var fiLW=fiveLetterWords;
+this.threeLetterWords = threeLetterWords;
+this.fourLetterWords = fourLetterWords;
+this.fiveLetterWords = fiveLetterWords;
 
 hello = function() {
     //var newh1 = document.createElement('h1')

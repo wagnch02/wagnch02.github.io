@@ -31,7 +31,7 @@ ladder = function() {
 	var myQ = new Queue();
 	myQ = myQ.queue('hi');
 	
-	if (myVal.length == length and myVal2.length == length) {
+	if (myVal.length == length && myVal2.length == length) {
 	   insertItem(myQ[0]);
 	}
 	

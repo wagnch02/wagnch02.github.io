@@ -4,9 +4,9 @@ var fLW= [];
 var fiLW=[];
 $.getScript("words.js", function(){
    alert("Script loaded and executed.");
-   tLW = words.threeLetterWords;
-   fLW = words.fourLetterWords;
-   fiLW = words.fiveLetterWords;
+   tLW = threeLetterWords;
+   fLW = fourLetterWords;
+   fiLW = fiveLetterWords;
 });
 
 hello = function() {

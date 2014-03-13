@@ -29,7 +29,7 @@ ladder = function() {
 	var filw = fiveLetterWords;
 	
 	var myQ = new Queue();
-	myQ.queue('hi');
+	myQ = myQ.queue('hi');
 	
 	insertItem(length);
 	insertItem(myVal);

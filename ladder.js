@@ -6,11 +6,12 @@ hello = function() {
 }
 // this is a single line comment
 myCounter = 0
-factors = function() {
+ladder = function() {
     var newList = document.createElement('ul')
     //var newp = document.getElementById("count");
     //myCounter = myCounter +1;    
-	var myVal = document.getElementById("myInt").value;
+	var myVal = document.getElementById("wordOne").value;
+	var myVal2 = document.getElementById("wordTwo").value;
     //newItem.innerHTML = myVal;
     //newItem.style.fontSize = "25px";
     //newItem.style.color="red";
@@ -20,8 +21,16 @@ factors = function() {
 	      ele.removeChild(ele.firstChild);
 	   }
 	}
-	var start = 2;
-	var lastInt = 0;
+	
+	var start = myVal;
+	var tlw = threeLetterWords;
+	var flw = fourLetterWords;
+	var filw = fiveLetterWords;
+	
+	/*while (start != myVal2) {
+	
+	}*/
+	
 	while (myVal > 1) {
 	   while (myVal % start == 0) {
 	      

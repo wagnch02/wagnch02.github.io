@@ -2,11 +2,19 @@
 <head>
 </head>
 <body>
-<p>Prime Factor Machine</p>
+<p>Word Ladder Machine</p>
+<select name="length">
+   <option value=3>3</option>
+   <option value=4>4</option>
+   <option value=5>5</option>
+</select>
 <form>
-   Enter an integer: <input type="text" name="myInt" id="myInt">
+   Enter a word: <input type="text" name="wordOne" id="wordOne">
 </form>
-<button onclick="factors()">Get prime factors</button>
+<form>
+   Enter a different word: <input type="text" name="wordTwo" id="wordTwo">
+</form>
+<button onclick="ladder()">Get word ladder</button>
 <div id="temp1"></div>
 <div id="count"></div>
 <span id="countval"></span>

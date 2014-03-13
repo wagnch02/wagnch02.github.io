@@ -119,12 +119,14 @@ searchWords = function(currentWord, currentStack, wordLen, wordDict, usedWordSet
             difCount = difCount + 1;
          }
 	  }
-	  if (difCount == 1 && usedSet.doesNotContain(words[i])) {
-		var stack = new Stack();
-		stack = newStack;
-		stack.push(words[i]);
-		usedSet.add(words[i]);
-	    myQ.queue(stack);
+	  if (difCount == 1) {
+	    if (usedSet.doesNotContain(words[i])) {
+		   var stack = new Stack();
+		   stack = newStack;
+		   stack.push(words[i]);
+		   usedSet.add(words[i]);
+	       myQ.queue(stack);
+		}
 	  }
 	  difCount = 0;
    }

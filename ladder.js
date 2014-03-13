@@ -43,7 +43,7 @@ factors = function() {
 		  //newItem.innerHTML = start;
 		  if (start != lastInt) {
 		     insertItem(start, "item"+start);
-			 insertItem(tLW[start], "item"+start);
+			 insertItem(tLW[start], "item"+start+20);
 		  }
 		  lastInt = start;
 	   }

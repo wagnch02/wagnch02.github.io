@@ -1,4 +1,10 @@
 /* This is a comment */
+$.getScript("words.js", function(){
+   alert("Script loaded and executed.");
+   var tLW = words.threeLetterWords;
+   var fLW = words.fourLetterWords;
+   var fiLW = words.fiveLetterWords;
+});
 
 hello = function() {
     //var newh1 = document.createElement('h1')

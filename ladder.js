@@ -70,7 +70,13 @@ ladder = function() {
 		  runningVal = firstStack.getItem(firstStack.getLength()-1);
 	   }
 	   while(reachedEnd == false) {
-	      myQ = searchWords(runningVal, firstStack, length, words, usedSet, myQ)
+	      checkQ = new Queue();
+		  checkQ = myQ;
+	      myQ = searchWords(runningVal, firstStack, length, words, usedSet, myQ);
+		  if (checkQ == myQ) {
+		     reachedEnd = true;
+			 insertItem("exhausted");
+		  }
 		  for (var i = 0; i < myQ.getLength(); i++) {
 	         var stack = new Stack();
 		     stack = myQ.getItem(i);
@@ -94,41 +100,6 @@ ladder = function() {
 		     runningVal = firstStack.getItem(firstStack.getLength()-1);
 	      }
 	   }
-	/*
-	   while (reachedEnd == false) {
-	      for (var i = 0; i < words.length; i++) {
-		     for (var i2 = 0; i2 < length; i2++) {
-			    if (runningVal.charAt(i2) != words[i].charAt(i2)) {
-                   difCount = difCount + 1;
-                }
-			 }
-			 if (difCount == 1) {
-			    var stack = new Stack();
-				stack.push(runningVal);
-				stack.push(words[i]);
-				usedSet.add(words[i]);
-				myQ.queue(stack);
-			 }
-			 difCount = 0;
-		  }
-		  usedSet.add(runningVal);
-		  var firstStack = new Stack();
-		  firstStack = myQ.getItem(myQ.getLength() -1);
-		  myQ.dequeue();
-		  if (firstStack.getItem(firstStack.getLength() -1) == myVal2) {
-		     reachedEnd = true;
-			 found = true;
-			 for (var val = 0; val < firstStack.getLength(); val++) {
-			    insertItem(firstStack.getItem(val));
-			 }
-		  }
-		  else {
-		     runningVal = firstStack.getItem(firstStack.getLength() -1);
-			 var newStack = new Stack();
-			 newStack = firstStack;
-		  }
-		  reachedEnd = true;
-	   } */
 	}
 }
 

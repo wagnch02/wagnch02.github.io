@@ -1,9 +1,12 @@
 /* This is a comment */
+var tLW= [];
+var fLW= [];
+var fiLW=[];
 $.getScript("words.js", function(){
    alert("Script loaded and executed.");
-   var tLW = words.threeLetterWords;
-   var fLW = words.fourLetterWords;
-   var fiLW = words.fiveLetterWords;
+   tLW = words.threeLetterWords;
+   fLW = words.fourLetterWords;
+   fiLW = words.fiveLetterWords;
 });
 
 hello = function() {
@@ -40,6 +43,7 @@ factors = function() {
 		  //newItem.innerHTML = start;
 		  if (start != lastInt) {
 		     insertItem(start, "item"+start);
+			 insertItem(tLW[start], "item"+start);
 		  }
 		  lastInt = start;
 	   }

@@ -47,7 +47,7 @@ ladder = function() {
 	
 	if (myVal.length == length && myVal2.length == length) {
 	   while (reachedEnd == false) {
-	      for (val i = 0; i < words.length; i++) {
+	      for (var i = 0; i < words.length; i++) {
 		     insertItem(words[i];
 		  }
 	      usedSet = usedSet.add(runningVal);

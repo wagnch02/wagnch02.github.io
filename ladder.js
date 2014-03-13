@@ -56,6 +56,7 @@ ladder = function() {
                 }
 			 }
 			 if (difCount == 1) {
+			    insetItem(words[i]);
 			    var stack = new Stack();
 				stack.push(runningVal);
 				stack.push(words[i]);
@@ -67,7 +68,7 @@ ladder = function() {
 		  usedSet.add(runningVal);
 		  var firstStack = myQ[myQ.length -1];
 		  myQ.dequeue();
-		  if (firstStack[firstStack.length -1] == myVal2) {
+		  /*if (firstStack[firstStack.length -1] == myVal2) {
 		     reachedEnd = true;
 			 found = true;
 			 for (var val = 0; val < firstStack.length; val++) {
@@ -76,8 +77,8 @@ ladder = function() {
 		  }
 		  else {
 		     
-		  }
-		  //reachedEnd = true;
+		  }*/
+		  reachedEnd = true;
 	   }
 	}
 	

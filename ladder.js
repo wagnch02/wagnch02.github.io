@@ -56,12 +56,12 @@ ladder = function() {
                 }
 			 }
 			 if (difCount == 1) {
-			    insertItem(words[i]);
 			    var stack = new Stack();
 				stack.push(runningVal);
 				stack.push(words[i]);
 				usedSet.add(words[i]);
 				myQ.queue(stack);
+				insertItem(myQ[myQ.length -1])
 			 }
 			 difCount = 0;
 		  }

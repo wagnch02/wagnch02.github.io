@@ -28,6 +28,7 @@ ladder = function() {
 	var flw = fourLetterWords;
 	var filw = fiveLetterWords;
 	
+	insertItem(length);
 	/*while (start != myVal2) {
 	
 	}*/
@@ -42,7 +43,6 @@ ladder = function() {
 		  if (start != lastInt) {
 		     insertItem(start);
 			 insertItem(threeLetterWords[start]);
-			 insertItem(length);
 		  }
 		  lastInt = start;
 	   }

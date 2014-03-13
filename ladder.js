@@ -72,7 +72,7 @@ ladder = function() {
 		     reachedEnd = true;
 			 found = true;
 			 for (var val = 0; val < firstStack.getLength(); val++) {
-			    insertItem(firstStack[val]);
+			    insertItem(firstStack.getItem(val));
 			 }
 		  }
 		  else {

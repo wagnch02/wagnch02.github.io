@@ -56,7 +56,7 @@ ladder = function() {
                 }
 			 }
 			 if (difCount == 1) {
-			    insetItem(words[i]);
+			    insertItem(words[i]);
 			    var stack = new Stack();
 				stack.push(runningVal);
 				stack.push(words[i]);

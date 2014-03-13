@@ -63,6 +63,35 @@ ladder = function() {
 		     insertItem(foundStack.getItem(i));
 		  }
 	   }
+	   else {
+	      firstStack = new Stack();
+	      firstStack = myQ.getItem(myQ.getLength()-1);
+		  runningVal = firstStack.getItem(firstStack.getLength()-1);
+	   }
+	   while(reachedEnd == false) {
+	      myQ = searchWords(runningVal, firstStack, length, words, usedSet, myQ)
+		  for (var i = 0; i < myQ.getLength(); i++) {
+	         var stack = new Stack();
+		     stack = myQ.getItem(i);
+		     usedSet.add(stack.getItem(stack.getLength()-1));
+		     if (stack.getItem(stack.getLength()-1) == myVal2) {
+		        foundStack = stack;
+			    found = true;
+			    reachedEnd = true;
+		     }
+	      }
+	   
+	      if (found == true) {
+	         for (var i = 0; i < foundStack.getLength(); i++) {
+		        insertItem(foundStack.getItem(i));
+		     }
+	      }
+	      else {
+	         firstStack = new Stack();
+	         firstStack = myQ.getItem(myQ.getLength()-1);
+		     runningVal = firstStack.getItem(firstStack.getLength()-1);
+	      }
+	   }
 	/*
 	   while (reachedEnd == false) {
 	      for (var i = 0; i < words.length; i++) {

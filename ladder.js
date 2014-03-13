@@ -24,15 +24,35 @@ ladder = function() {
 	}
 	
 	var runningVal = myVal;
-	var tlw = threeLetterWords;
-	var flw = fourLetterWords;
-	var filw = fiveLetterWords;
+	var found = false;
+	var reachedEnd = false;
 	
+	var usedSet = new Set();
 	var myQ = new Queue();
-	myQ = myQ.queue('hi');
+	var myStack = new Stack();
+	
+	var words = [];
+	
+	if (length == 3) {
+	   words = threeLetterWords;
+	}
+	
+	if (length == 4) {
+	   words = fourLetterWords;
+	}
+	
+	if (length == 5) {
+	   words = fiveLetterWords;
+	}
 	
 	if (myVal.length == length && myVal2.length == length) {
-	   insertItem(myQ[0]);
+	   while (reachedEnd == false) {
+	      for (val i = 0; i < words.length; i++) {
+		     insertItem(words[i];
+		  }
+	      usedSet = usedSet.add(runningVal);
+		  reachedEnd = true;
+	   }
 	}
 	
 	/*

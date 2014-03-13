@@ -51,7 +51,7 @@ ladder = function() {
 	   while (reachedEnd == false) {
 	      for (var i = 0; i < words.length; i++) {
 		     for (var i2 = 0; i < length; i++) {
-			    if (runningValue.charAt(i2) != words[i].charAt(i2)) {
+			    if (runningVal.charAt(i2) != words[i].charAt(i2)) {
                    difCount = difCount + 1;
                 }
 			 }

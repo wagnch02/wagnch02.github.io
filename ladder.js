@@ -116,7 +116,7 @@ searchWords = function(currentWord, currentStack, wordLen, wordDict, usedWordSet
 	     if (runningVal.charAt(i2) != words[i].charAt(i2)) {
             difCount = difCount + 1;
          }
-	     if (difCount == 1 && usedSet.doesNotContain(words[i]) {
+	     if (difCount == 1 && usedSet.doesNotContain(words[i])) {
 			var stack = new Stack();
 			stack = newStack;
 			stack.push(words[i]);

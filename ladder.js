@@ -61,26 +61,23 @@ ladder = function() {
 				stack.push(words[i]);
 				usedSet.add(words[i]);
 				myQ.queue(stack);
-				var ind = new Stack();
-				ind = myQ.getItem(myQ.getLength() -1);
-				var inl = ind.getItem(ind.getLength() -1);
-				insertItem(inl);
 			 }
 			 difCount = 0;
 		  }
 		  usedSet.add(runningVal);
-		  var firstStack = myQ[myQ.length -1];
+		  var firstStack = new Stack();
+		  firstStack = myQ[myQ.getLength() -1];
 		  myQ.dequeue();
-		  /*if (firstStack[firstStack.length -1] == myVal2) {
+		  if (firstStack[firstStack.getLength() -1] == myVal2) {
 		     reachedEnd = true;
 			 found = true;
-			 for (var val = 0; val < firstStack.length; val++) {
+			 for (var val = 0; val < firstStack.getLength(); val++) {
 			    insertItem(firstStack[val]);
 			 }
 		  }
 		  else {
 		     
-		  }*/
+		  }
 		  reachedEnd = true;
 	   }
 	}

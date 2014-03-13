@@ -20,4 +20,8 @@ Stack = function() {
 	this.getItem = function(index) {
 	   return values[index];
 	}
+	
+	this.getLength = function() {
+	   return values.length;
+	}
 }

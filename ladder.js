@@ -12,6 +12,7 @@ ladder = function() {
     //myCounter = myCounter +1;    
 	var myVal = document.getElementById("wordOne").value;
 	var myVal2 = document.getElementById("wordTwo").value;
+	var length = document.getElementByName("length").value;
     //newItem.innerHTML = myVal;
     //newItem.style.fontSize = "25px";
     //newItem.style.color="red";
@@ -41,6 +42,7 @@ ladder = function() {
 		  if (start != lastInt) {
 		     insertItem(start);
 			 insertItem(threeLetterWords[start]);
+			 insertItem(length);
 		  }
 		  lastInt = start;
 	   }

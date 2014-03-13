@@ -66,6 +66,7 @@ ladder = function() {
 	   else {
 	      firstStack = new Stack();
 	      firstStack = myQ.getItem(myQ.getLength()-1);
+		  myQ = myQ.dequeue();
 		  runningVal = firstStack.getItem(firstStack.getLength()-1);
 	   }
 	   while(reachedEnd == false) {
@@ -89,6 +90,7 @@ ladder = function() {
 	      else {
 	         firstStack = new Stack();
 	         firstStack = myQ.getItem(myQ.getLength()-1);
+			 myQ = myQ.dequeue();
 		     runningVal = firstStack.getItem(firstStack.getLength()-1);
 	      }
 	   }

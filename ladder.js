@@ -56,9 +56,6 @@ ladder = function() {
 			 found = true;
 			 reachedEnd = true;
 		  }
-		  for (var l  = 0; l < stack.getLength(); l++) {
-		     insertItem(stack.getItem(l));
-		  }
 	   }
 	   
 	   if (found == true) {

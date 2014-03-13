@@ -33,6 +33,8 @@ ladder = function() {
 	
 	var words = [];
 	
+	var difCount = 0; //count of different letters in a word
+	
 	if (length == 3) {
 	   words = threeLetterWords;
 	}
@@ -48,10 +50,33 @@ ladder = function() {
 	if (myVal.length == length && myVal2.length == length) {
 	   while (reachedEnd == false) {
 	      for (var i = 0; i < words.length; i++) {
-		     insertItem(words[i]);
+		     for (var i2 = 0; i < length; i++) {
+			    if (runningValue.charAt(i2) != words[i].charAt(i2)) {
+                   difCount = difCount + 1;
+                }
+			 }
+			 if (difCount == 1) {
+			    var stack = new Stack();
+				stack.push(runningVal);
+				stack.push(words[i]);
+				usedSet.add(words[i]);
+				myQ.queue(stack);
+			 }
 		  }
-	      usedSet = usedSet.add(runningVal);
-		  reachedEnd = true;
+		  usedSet.add(runningVal);
+		  var firstStack = myQ[myQ.length -1];
+		  myQ.dequeue();
+		  if (firstStack[firstStack.length -1] == myVal2) {
+		     reachedEnd = true;
+			 found = true;
+			 for (var val = 0; val < firstStack.length; val++) {
+			    insertItem(firstStack[val]);
+			 }
+		  }
+		  else {
+		     
+		  }
+		  //reachedEnd = true;
 	   }
 	}
 	

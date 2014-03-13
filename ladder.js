@@ -28,25 +28,10 @@ ladder = function() {
 	var flw = fourLetterWords;
 	var filw = fiveLetterWords;
 	
-	insertItem(length);
-	/*while (start != myVal2) {
 	
-	}*/
-	
-	while (myVal > 1) {
-	   while (myVal % start == 0) {
-	      
-	      //var newItem = document.createElement('li')
-          //document.getElementById("count").appendChild(newItem)
-		  myVal /= start;
-		  //newItem.innerHTML = start;
-		  if (start != lastInt) {
-		     insertItem(start);
-			 insertItem(threeLetterWords[start]);
-		  }
-		  lastInt = start;
-	   }
-	   start = start + 1;
+	while (start != myVal2) {
+	   insertItem(length);
+	   start = myVal2;
 	}
 	
 }

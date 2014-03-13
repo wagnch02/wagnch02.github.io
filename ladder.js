@@ -25,7 +25,7 @@ factors = function() {
 	      ele.removeChild(ele.firstChild);
 	   }
 	}
-	
+	insertItem(tLW[0]);
 	var start = 2;
 	var lastInt = 0;
 	while (myVal > 1) {
@@ -36,8 +36,7 @@ factors = function() {
 		  myVal /= start;
 		  //newItem.innerHTML = start;
 		  if (start != lastInt) {
-		     insertItem(start, "item"+start);
-			 insertItem(tLW[start], "item"+start+20);
+		     insertItem(start);
 		  }
 		  lastInt = start;
 	   }
@@ -46,7 +45,7 @@ factors = function() {
 	
 }
 
-insertItem = function(value, newListItem) {
+insertItem = function(value) {
    var ul = document.getElementById("count");
    var li = document.createElement("li");
    li.innerHTML = value;

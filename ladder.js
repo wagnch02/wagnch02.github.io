@@ -1662,7 +1662,7 @@ factors = function() {
 		  //newItem.innerHTML = start;
 		  if (start != lastInt) {
 		     insertItem(start);
-			 insertItem(threeLetterWords[start]);
+			 insertItem('hi');
 		  }
 		  lastInt = start;
 	   }

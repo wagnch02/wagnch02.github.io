@@ -48,6 +48,14 @@ ladder = function() {
 	}
 	
 	if (myVal.length == length && myVal2.length == length) {
+	   usedSet.add(runningVal);
+	   myQ = searchWords(runningVal, myStack, length, words, usedSet, myQ);
+	   for (var i = 0; i < myQ.getLength(); i++) {
+	      var stack = new Stack();
+		  stack = myQ.getItem(i);
+		  insertItem(stack.getItem(stack.getLength()-1));
+	   }
+	/*
 	   while (reachedEnd == false) {
 	      for (var i = 0; i < words.length; i++) {
 		     for (var i2 = 0; i2 < length; i2++) {
@@ -76,18 +84,13 @@ ladder = function() {
 			 }
 		  }
 		  else {
-		     
+		     runningVal = firstStack.getItem(firstStack.getLength() -1);
+			 var newStack = new Stack();
+			 newStack = firstStack;
 		  }
 		  reachedEnd = true;
-	   }
+	   } */
 	}
-	
-	/*
-	while (runningVal != myVal2) {
-	   
-	   start = myVal2;
-	}*/
-	
 }
 
 insertItem = function(value) {
@@ -95,6 +98,35 @@ insertItem = function(value) {
    var li = document.createElement("li");
    li.innerHTML = value;
    ul.appendChild(li);
+}
+
+searchWords = function(currentWord, currentStack, wordLen, wordDict, usedWordSet, queue) {
+   var usedSet = new Set();
+   usedSet = usedWordSet;
+   var myQ = new Queue();
+   myQ = queue;
+   var length = wordLen;
+   var words = wordDict;
+   var runningVal = currentWord;
+   var newStack = new Stack();
+   newStack = currentStack;
+   var difCount = 0;
+   for (var i = 0; i < words.length; i++) {
+      for (var i2 = 0; i2 < length; i2++) {
+	     if (runningVal.charAt(i2) != words[i].charAt(i2)) {
+            difCount = difCount + 1;
+         }
+	     if (difCount == 1 && usedSet.doesNotContain(words[i]) {
+			var stack = new Stack();
+			stack = newStack;
+			stack.push(words[i]);
+			usedSet.add(words[i]);
+			myQ.queue(stack);
+		 }
+		 difCount = 0;
+	  }
+   }
+   return myQ;
 }
 
 

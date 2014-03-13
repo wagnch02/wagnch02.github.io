@@ -7,6 +7,15 @@ Set = function() {
 	   return values;
     }
 	
+	this.doesNotContain = function(item) {
+	   for (var i = 0; i < values.length; i++) {
+	      if (values[i] == item) {
+		     return false;
+		  }
+	   }
+	   return true;
+	}
+	
 	this.contains = function(item) {
 	   for (var i = 0; i < values.length; i++) {
 	      if (values[i] == item) {

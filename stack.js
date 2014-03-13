@@ -16,4 +16,8 @@ Stack = function() {
 	   values.length=0;
 	   return values;
 	}
+	
+	this.getItem = function(index) {
+	   return values[index];
+	}
 }

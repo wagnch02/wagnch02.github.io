@@ -61,10 +61,8 @@ ladder = function() {
 				stack.push(words[i]);
 				usedSet.add(words[i]);
 				myQ.queue(stack);
-				var l = myQ.length - 1;
-				var l2 = stack.length;
-				var s = myQ[l];
-				insertItem(s[l2]);
+				var ind = myQ.getItem(myQ.length -1);
+				insertItem(ind);
 			 }
 			 difCount = 0;
 		  }

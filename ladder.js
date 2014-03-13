@@ -110,8 +110,6 @@ insertItem = function(value) {
 }
 
 searchWords = function(currentWord, currentStack, wordLen, wordDict, usedWordSet, queue) {
-   var usedSet = new Set();
-   usedSet = usedWordSet;
    var myQ = new Queue();
    myQ = queue;
    var length = wordLen;
@@ -128,11 +126,11 @@ searchWords = function(currentWord, currentStack, wordLen, wordDict, usedWordSet
 	  }
 	  if (difCount == 1) {
 	    if (usedSet.doesNotContain(words[i])) {
+		   var usedSet = new Set();
+           usedSet = usedWordSet;
 		   var stack = new Stack();
-		   for (var s = 0; s < newStack.getLength(); s++) {
-		      stack.push(newStack.getItem(s));
-		   }
-		   stack.push(words[i]);
+		   stack = newStack;
+		   stack=stack.push(words[i]);
 		   usedSet=usedSet.add(words[i]);
 	       myQ.queue(stack);
 		}

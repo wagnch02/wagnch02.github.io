@@ -28,13 +28,14 @@ ladder = function() {
 	var flw = fourLetterWords;
 	var filw = fiveLetterWords;
 	
-	
+	insertItem(length);
+	insertItem(myVal);
+	insertItem(myVal2);
+	/*
 	while (start != myVal2) {
-	   insertItem(length);
-	   insertItem(myVal);
-	   insertItem(myVal2);
+	   
 	   start = myVal2;
-	}
+	}*/
 	
 }
 

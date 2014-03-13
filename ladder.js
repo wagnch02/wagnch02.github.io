@@ -50,7 +50,7 @@ ladder = function() {
 	if (myVal.length == length && myVal2.length == length) {
 	   while (reachedEnd == false) {
 	      for (var i = 0; i < words.length; i++) {
-		     for (var i2 = 0; i < length; i++) {
+		     for (var i2 = 0; i2 < length; i2++) {
 			    if (runningVal.charAt(i2) != words[i].charAt(i2)) {
                    difCount = difCount + 1;
                 }

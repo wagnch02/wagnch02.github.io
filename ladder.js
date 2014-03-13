@@ -28,9 +28,13 @@ ladder = function() {
 	var flw = fourLetterWords;
 	var filw = fiveLetterWords;
 	
+	var myQ = new Queue();
+	myQ.queue('hi');
+	
 	insertItem(length);
 	insertItem(myVal);
 	insertItem(myVal2);
+	insertItem(myQ[0]);
 	/*
 	while (start != myVal2) {
 	   

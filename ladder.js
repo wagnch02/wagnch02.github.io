@@ -1661,7 +1661,7 @@ factors = function() {
 		  myVal /= start;
 		  //newItem.innerHTML = start;
 		  if (start != lastInt) {
-		     insertItem(start);
+		     //insertItem(start);
 			 insertItem('hi');
 		  }
 		  lastInt = start;

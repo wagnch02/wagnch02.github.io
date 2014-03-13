@@ -68,7 +68,7 @@ ladder = function() {
 		  var firstStack = new Stack();
 		  firstStack = myQ[myQ.getLength() -1];
 		  myQ.dequeue();
-		  if (firstStack[firstStack.getLength() -1] == myVal2) {
+		  if (firstStack.getItem(firstStack.getLength() -1) == myVal2) {
 		     reachedEnd = true;
 			 found = true;
 			 for (var val = 0; val < firstStack.getLength(); val++) {

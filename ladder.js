@@ -25,7 +25,7 @@ ladder = function() {
 	
 	var usedSet = new Set();
 	var myQ = new Queue();
-	var myStack = new Stack();
+	var firstStack = new Stack();
 	
 	var words = [];
 	
@@ -45,7 +45,8 @@ ladder = function() {
 	
 	if (myVal.length == length && myVal2.length == length) {
 	   usedSet.add(runningVal);
-	   myStack.push(runningVal);
+	   firstStack.push(runningVal);
+	   /*
 	   myQ = searchWords(runningVal, myStack, length, words, usedSet, myQ);
 	   for (var i = 0; i < myQ.getLength(); i++) {
 	      var stack = new Stack();
@@ -68,7 +69,7 @@ ladder = function() {
 	      firstStack = myQ.getItem(myQ.getLength()-1);
 		  myQ = myQ.dequeue();
 		  runningVal = firstStack.getItem(firstStack.getLength()-1);
-	   }
+	   } */
 	   while(reachedEnd == false) {
 	      checkQ = new Queue();
 		  checkQ = myQ;

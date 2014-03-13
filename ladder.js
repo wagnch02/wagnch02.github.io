@@ -66,7 +66,7 @@ ladder = function() {
 		  }
 		  usedSet.add(runningVal);
 		  var firstStack = new Stack();
-		  firstStack = myQ[myQ.getLength() -1];
+		  firstStack = myQ.getItem(myQ.getLength() -1);
 		  myQ.dequeue();
 		  if (firstStack.getItem(firstStack.getLength() -1) == myVal2) {
 		     reachedEnd = true;

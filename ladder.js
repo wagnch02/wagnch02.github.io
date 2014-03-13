@@ -58,7 +58,7 @@ ladder = function() {
 	   }
 	   
 	   if (found == true) {
-	      for (var i = 0; i < foundStack.getLength()-1; i++) {
+	      for (var i = 0; i < foundStack.getLength(); i++) {
 		     insertItem(foundStack.getItem(i));
 		  }
 	   }

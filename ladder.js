@@ -50,7 +50,7 @@ ladder = function() {
 	
 	if (myVal.length == length && myVal2.length == length) {
 	   usedSet.add(runningVal);
-	   firstStack.values.push(runningVal);
+	   firstStack.values[0] = runningVal;
 	   while(reachedEnd == false) {
 	      for (var i = 0; i < words.length; i++) {
             for (var i2 = 0; i2 < length; i2++) {

@@ -105,7 +105,7 @@ ladder = function() {
 			 insertItem(myQ.values);
 	      } 
 		  count++;
-		  if(count==5){
+		  if(count==3){
 		     reachedEnd=true;
 		  }
 	   }

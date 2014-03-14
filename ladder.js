@@ -75,18 +75,17 @@ ladder = function() {
 		  for (var i = 0; i < myQ.getLength(); i++) {
 	         var stack = new Stack();
 		     stack=myQ.getItem(i);
+			 stack=stack.pop();
 		     usedSet = usedSet.add(stack.getItem(stack.getLength()-1));
-			 for (var j =0;j<length;j++) {
-			    insertItem(stack.getItem(j));
-			 }
+			 //for (var j =0;j<length;j++) {
+			    //insertItem(stack.getItem(j));
+			 //}
 		     if (stack.getItem(stack.getLength()-1) == myVal2) {
 		        foundStack = stack;
 			    found = true;
 			    reachedEnd = true;
 		     }
 	      }
-		  reachedEnd=true;
-		  found=true;
 	   
 	      if (found == true) {
 	         for (var i = 0; i < foundStack.getLength(); i++) {

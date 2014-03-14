@@ -1,6 +1,6 @@
-Stack = function(array) {
+Stack = function() {
 
-    this.svalues = [array];
+    this.svalues = [];
 
     this.push = function(item) {
 	   this.svalues.push(item);

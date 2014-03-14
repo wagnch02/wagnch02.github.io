@@ -64,7 +64,7 @@ ladder = function() {
                     firstStack.svalues.push(words[i]);
 		            usedSet.add(words[i]);
 		            myQ.queue([]);
-					insertItem(words[i]);
+					//insertItem(words[i]);
 					for (var hp=0;hp<firstStack.getLength();hp++){
 					   myQ.values[0].push(firstStack.getItem(hp));
 					}
@@ -100,8 +100,8 @@ ladder = function() {
 		count++;
 		insertItem(firstStack.svalues);
 		if (count==5) {
-		   insertItem(myQ.values);
-		   insertItem(firstStack.svalues);
+		   //insertItem(myQ.values);
+		   //insertItem(firstStack.svalues);
 		   //reachedEnd=true;
 		}
 	   }

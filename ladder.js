@@ -95,6 +95,7 @@ ladder = function() {
 	      else {
 	         firstStack = new Stack();
 	         firstStack = myQ.getItem(myQ.getLength()-1);
+			 firstStack=firstStack.pop();
 			 myQ = myQ.dequeue();
 		     runningVal = firstStack.getItem(firstStack.getLength()-1);
 	      }

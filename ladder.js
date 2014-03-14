@@ -67,11 +67,11 @@ ladder = function() {
 				    count++;
                     firstStack.svalues.push(words[i]);
 		            usedSet.add(words[i]);
-		            myQ.values.unshift([myVal]);
+		            myQ.values.push([firstStack.svalues]);
 					//insertItem(words[i]);
-					for (var hp=1;hp<firstStack.getLength();hp++){
-					   myQ.values[0].push(firstStack.getItem(hp));
-					}
+					//for (var hp=1;hp<firstStack.getLength();hp++){
+					   //myQ.values[0].push(firstStack.getItem(hp));
+					//}
 					templen=firstStack.svalues.length;
 					firstStack.svalues.pop();
 		        }
@@ -95,7 +95,7 @@ ladder = function() {
 			 }
 	     }
 	     else {
-			 tempval=myQ.values.pop();
+			 tempval=myQ.values.shift();
 			 len3=tempval.length;
 			 firstStack.svalues.push(tempval[len3-1]);
 			 insertItem(firstStack.svalues);

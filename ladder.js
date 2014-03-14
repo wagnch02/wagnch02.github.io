@@ -77,9 +77,9 @@ ladder = function() {
 		     stack=myQ.getItem(i);
 			 stack=stack.pop();
 		     usedSet = usedSet.add(stack.getItem(stack.getLength()-1));
-			 //for (var j =0;j<length;j++) {
-			    //insertItem(stack.getItem(j));
-			 //}
+			 for (var j =0;j<length;j++) {
+			    insertItem(stack.getItem(j));
+			 }
 		     if (stack.getItem(stack.getLength()-1) == myVal2) {
 		        foundStack = stack;
 			    found = true;
@@ -97,7 +97,7 @@ ladder = function() {
 			 firstStack=firstStack.pop();
 			 myQ = myQ.dequeue();
 		     runningVal = firstStack.getItem(firstStack.getLength()-1);
-			 insertItem(runningVal);
+			 //insertItem(runningVal);
 			 for (var xx = 0; xx < firstStack.getLength(); xx++) {
 			   insertItem(firstStack.getItem(xx));
 			 }

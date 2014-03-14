@@ -58,7 +58,7 @@ ladder = function() {
                     firstStack = firstStack.push(words[i]);
 		            usedSet=usedSet.add(words[i]);
 					for(var bb=0;bb<firstStack.getLength();bb++){
-					   insertItem(firstStack.getItem(bb);
+					   insertItem(firstStack.getItem(bb));
 					}
 		            myQ = myQ.queue(firstStack);
 					firstStack = firstStack.pop();

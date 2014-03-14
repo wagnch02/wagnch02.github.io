@@ -79,7 +79,8 @@ ladder = function() {
 		  for (var i = 0; i < myQ.getLength(); i++) {
 	         var stack = new Stack();
 		     stack = myQ.getItem(i);
-			 var al = stack.getLength()-1;
+			 var al = new Stack();
+			 al = stack.getLength()-1;
 		     wordSet = usedSet.add(stack.getItem(al));
 		     if (stack.getItem(stack.getLength()-1) == myVal2) {
 		        foundStack = stack;

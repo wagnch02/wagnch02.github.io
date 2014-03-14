@@ -133,7 +133,7 @@ searchWords = function(currentWord, currentStack, wordLen, wordDict, usedWordSet
 	    if (usedSet.doesNotContain(words[i])) {
 		   newStack=newStack.push(words[i]);
 		   usedSet=usedSet.add(words[i]);
-		   
+		   myQ = myQ.queue(newStack);
 		}
 	  }
 	  difCount = 0;

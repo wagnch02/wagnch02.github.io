@@ -55,13 +55,10 @@ ladder = function() {
 	        }
 	        if (difCount == 1) {
 	            if (usedSet.doesNotContain(words[i])) {
-                    tempStack = tempStack.clear();
-		            for (var g = 0; g < currentStack.getLength(); g++) {
-		               tempStack=tempStack.push(currentStack.getItem(g));
-		            }
-                    tempStack = tempStack.push(words[i]);
+                    firstStack = firstStack.push(words[i]);
 		            usedSet=usedSet.add(words[i]);
-		            myQ = myQ.queue(tempStack);
+		            myQ = myQ.queue(firstStack);
+					firstStack = firstStack.pop();
 		        }
 	        }
 	        difCount = 0;

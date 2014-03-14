@@ -75,10 +75,10 @@ ladder = function() {
 		  wordSet = usedSet;
 	      myQ = searchWords(runningVal, firstStack, length, words, wordSet, myQ);
 		  for (var i = 0; i < myQ.getLength(); i++) {
-	         var mStack = new Stack();
-		     mStack = myQ.getItem(i);
+	         var stack = new Stack();
+		     stack = myQ.getItem(i);
 			 var al = new Stack();
-			 al = mStack.length;
+			 al = stack.length;
 			 al = al-1;
 		     wordSet = usedSet.add(stack.getItem(al));
 		     if (stack.getItem(stack.getLength()-1) == myVal2) {

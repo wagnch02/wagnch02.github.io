@@ -97,7 +97,7 @@ ladder = function() {
 	     else {
 			 tempval=myQ.values.pop();
 			 firstStack.svalues.push(tempval);
-			 insertItem(firstStack.values);
+			 insertItem(firstStack.svalues);
 	      }
 		  reachedEnd=true;
 		  count=count+1;

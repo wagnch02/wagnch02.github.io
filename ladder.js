@@ -74,7 +74,7 @@ ladder = function() {
 		        foundStack.values = myQ.values[x];
 			    found = true;
 			    reachedEnd = true;
-				insertItem("almost");
+				//insertItem("almost");
 		    }
 	     }
 	     if (found == true) {

@@ -99,7 +99,7 @@ ladder = function() {
 		     runningVal = firstStack.getItem(firstStack.getLength()-1);
 			 //insertItem(runningVal);
 			 for (var xx = 0; xx < firstStack.getLength(); xx++) {
-			   insertItem(firstStack.getItem(xx));
+			   //insertItem(firstStack.getItem(xx));
 			 }
 			 
 			 found = true;///////////////////delete later

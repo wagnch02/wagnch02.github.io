@@ -86,7 +86,7 @@ ladder = function() {
 	     else {
 		     templen=myQ.getLength();
 			 templen2=myQ.values[templen-1].length;
-	         firstStack.values.push(myQ.values[templen][templen2-1];
+	         firstStack.values.push(myQ.values[templen][templen2-1]);
 			 myQ.dequeue;
 	      }
 	   }

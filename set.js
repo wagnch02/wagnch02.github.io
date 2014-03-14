@@ -4,7 +4,7 @@ Set = function() {
 
     this.add = function(item) {
 	   values.push(item);
-	   return values;
+	   return this;
     }
 	
 	this.doesNotContain = function(item) {
@@ -27,6 +27,6 @@ Set = function() {
 	
 	this.clear = function() {
 	   values.length=0;
-	   return values;
+	   return this;
 	}
 }

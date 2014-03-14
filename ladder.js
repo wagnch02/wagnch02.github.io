@@ -44,8 +44,8 @@ ladder = function() {
 	}
 	
 	if (myVal.length == length && myVal2.length == length) {
-	   usedSet.add(runningVal);
-	   firstStack.push(runningVal);
+	   usedSet=usedSet.add(runningVal);
+	   firstStack=firstStack.push(runningVal);
 	   /*
 	   myQ = searchWords(runningVal, myStack, length, words, usedSet, myQ);
 	   for (var i = 0; i < myQ.getLength(); i++) {
@@ -71,13 +71,11 @@ ladder = function() {
 		  runningVal = firstStack.getItem(firstStack.getLength()-1);
 	   } */
 	   while(reachedEnd == false) {
-	      wordSet = new Set();
-		  wordSet = usedSet;
-	      myQ = searchWords(runningVal, firstStack, length, words, wordSet, myQ);
+	      myQ = searchWords(runningVal, firstStack, length, words, usedSet, myQ);
 		  for (var i = 0; i < myQ.getLength(); i++) {
 	         var stack = new Stack();
 		     stack=stack.push(myQ.getItem(i));
-		     wordSet = usedSet.add(stack.getItem(stack.getLength()-1));
+		     usedSet = usedSet.add(stack.getItem(stack.getLength()-1));
 		     if (stack.getItem(stack.getLength()-1) == myVal2) {
 		        foundStack = stack;
 			    found = true;

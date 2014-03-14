@@ -27,6 +27,7 @@ ladder = function() {
 	var firstStack = new Stack();
 	var tempStack = new Stack();
 	var words = [];
+	var count=0;
 	
 	var difCount = 0; //count of different letters in a word
 	
@@ -56,7 +57,7 @@ ladder = function() {
 	            if (usedSet.doesNotContain(words[i])) {
                     firstStack.push(words[i]);
 		            usedSet.add(words[i]);
-		            myQ.queue(firstStack);
+		            myQ.queue(new Stack(firstStack.svalues));
 					firstStack.pop();
 		        }
 	        }

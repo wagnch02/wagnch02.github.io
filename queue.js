@@ -1,6 +1,6 @@
-Queue = function() {
+Queue = function(array) {
 
-    this.values = [];
+    this.values = [array];
 
     this.queue = function(item) {
 	   this.values.unshift(item);

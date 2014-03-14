@@ -117,7 +117,7 @@ searchWords = function(currentWord, currentStack, wordLen, wordDict, usedWordSet
    var runVal = currentWord;
    var usedSet = usedWordSet;
    var difCount = 0;
-   for (var i = 0; i < words.length; i++) {
+   for (var i = 0; i < words.length-1; i++) {
       for (var i2 = 0; i2 < length; i2++) {
 	     insertItem(runVal);
 		 insertItem(words[i]);

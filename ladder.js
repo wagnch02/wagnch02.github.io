@@ -67,7 +67,11 @@ ladder = function() {
 				    count++;
                     firstStack.svalues.push(words[i]);
 		            usedSet.add(words[i]);
+<<<<<<< HEAD
 		            myQ.values.push([firstStack.svalues]);
+=======
+		            myQ.queue([]);
+>>>>>>> parent of 617888b... a
 					//insertItem(words[i]);
 					//for (var hp=1;hp<firstStack.getLength();hp++){
 					   //myQ.values[0].push(firstStack.getItem(hp));

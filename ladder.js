@@ -119,6 +119,8 @@ searchWords = function(currentWord, currentStack, wordLen, wordDict, usedWordSet
    var difCount = 0;
    for (var i = 0; i < words.length; i++) {
       for (var i2 = 0; i2 < length; i2++) {
+	     insertItem(runVal);
+		 insertItem(words[i]);
 	     if (runVal.charAt(i2) != words[i].charAt(i2)) {
             difCount = difCount + 1;
          }

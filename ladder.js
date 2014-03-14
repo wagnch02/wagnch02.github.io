@@ -58,7 +58,7 @@ ladder = function() {
                     firstStack = firstStack.push(words[i]);
 		            usedSet=usedSet.add(words[i]);
 		            myQ.queue(firstStack.svalues);
-					firstStack = firstStack.pop();
+					//firstStack = firstStack.pop();
 		        }
 	        }
 	        difCount = 0;

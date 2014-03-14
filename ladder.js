@@ -67,16 +67,15 @@ ladder = function() {
 	        difCount = 0;
           }
 		 for (var x = 0; x < myQ.getLength(); x++) {
-		    insertItem(myQ.values[x]);
-		    if (tempStack.getItem(tempStack.getLength()-1) == myVal2) {
-		        foundStack = tempStack;
+		    if (myQ.values[x][myQ.values[x].length] == myVal2) {
+		        foundStack.values = myQ.values[x];
 			    found = true;
 			    reachedEnd = true;
 		    }
 	     }
 	     if (found == true) {
 	         for (var p = 0; p < foundStack.getLength(); p++) {
-		        //insertItem(foundStack.getItem(p));
+		        insertItem("we did it");
 		     }
 	     }
 	     else {

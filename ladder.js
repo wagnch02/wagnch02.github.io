@@ -29,6 +29,7 @@ ladder = function() {
 	var words = [];
 	var temp;
 	var templen;
+	var templen2;
 	
 	var difCount = 0; //count of different letters in a word
 	
@@ -74,7 +75,6 @@ ladder = function() {
 		        foundStack.values = myQ.values[x];
 			    found = true;
 			    reachedEnd = true;
-				//insertItem("almost");
 		    }
 	     }
 	     if (found == true) {
@@ -84,17 +84,10 @@ ladder = function() {
 			 }
 	     }
 	     else {
-	         firstStack = myQ.getItem(myQ.getLength()-1);
-			 firstStack=firstStack.pop();
-			 myQ = myQ.dequeue();
-		     runningVal = firstStack.getItem(firstStack.getLength()-1);
-			 //insertItem(runningVal);
-			 //for (var xx = 0; xx < firstStack.getLength(); xx++) {
-			   //insertItem(firstStack.getItem(xx));
-			// }
-			 
-			 found = true;///////////////////delete later
-		     reachedEnd = true;//////////////////delete later
+		     templen=myQ.getLength();
+			 templen2=myQ.values[templen-1].length;
+	         firstStack.values.push(myQ.values[templen][templen2-1];
+			 myQ.dequeue;
 	      }
 	   }
 	}

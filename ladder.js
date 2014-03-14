@@ -125,7 +125,8 @@ searchWords = function(currentWord, currentStack, wordLen, wordDict, usedWordSet
 	  }
 	  if (difCount == 1) {
 	    if (usedSet.doesNotContain(words[i])) {
-           nStack = currentStack;
+           nStack = new Stack();
+		   nStack = currentStack;
            nStack = nStack.push(words[i]);
 		   usedSet=usedSet.add(words[i]);
 		   myQ = myQ.queue(nStack);

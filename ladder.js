@@ -71,7 +71,7 @@ ladder = function() {
 		    tempStack.clear();
 	        tempStack=myQ.getItem(i);
 			for (var j =0;j<length;j++) {
-			    insertItem(tempStack.getItem(j));
+			    //insertItem(tempStack.getItem(j));
 			}
 		    if (tempStack.getItem(tempStack.getLength()-1) == myVal2) {
 		        foundStack = stack;

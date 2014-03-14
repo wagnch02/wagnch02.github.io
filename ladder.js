@@ -56,15 +56,12 @@ ladder = function() {
 	        if (difCount == 1) {
 	            if (usedSet.doesNotContain(words[i])) {
                     firstStack = firstStack.push(words[i]);
-		            usedSet=usedSet.add(words[i]);
-		            myQ = myQ.queue(firstStack);
-					firstStack = firstStack.pop();
-					for (var f = 0; f < myQ.getLength();f++) {
-					   firstStack=myQ.getItem(f);
-					   for (var ff =0;ff<=firstStack.getLength();ff++){
+					for (var ff =0;ff<firstStack.getLength();ff++){
 					     insertItem(firstStack.getItem(ff));
 					   }
-					}
+		            usedSet=usedSet.add(words[i]);
+		            myQ = myQ.queue(firstStack);
+					firstStack = firstStack.clear();
 		        }
 	        }
 	        difCount = 0;

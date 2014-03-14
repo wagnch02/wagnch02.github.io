@@ -97,7 +97,7 @@ ladder = function() {
 	         firstStack = new Stack();
 	         firstStack = myQ.getItem(myQ.getLength()-1);
 			 myQ = myQ.dequeue();
-		     runningVal = firstStack.getItem(firstStack.getLength()-1);
+		     runningVal = firstStack[firstStack.length -1];
 	      }
 	   }
 	}

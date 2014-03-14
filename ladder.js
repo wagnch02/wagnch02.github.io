@@ -30,6 +30,7 @@ ladder = function() {
 	var temp;
 	var templen;
 	var templen2;
+	var temparray;
 	
 	var difCount = 0; //count of different letters in a word
 	
@@ -86,7 +87,8 @@ ladder = function() {
 	     else {
 		     templen=myQ.getLength();
 			 templen2=myQ.values[templen-1].length;
-	         firstStack.values.push(myQ.values[templen][templen2-1]);
+			 temparray=myQ.values[templen-1];
+	         firstStack.values.push(temparray[templen2-1]);
 			 myQ.dequeue;
 	      }
 	   }

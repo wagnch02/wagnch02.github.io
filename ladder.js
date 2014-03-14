@@ -63,7 +63,7 @@ ladder = function() {
 	        difCount = 0;
           }
 		 for (var x = 0; x < myQ.getLength(); x++) {
-		    tempStack=myQ.getItem(x);
+		    tempStack=myQ.getItem(1);
 			insertItem(tempStack.getItem(x));
 		    if (tempStack.getItem(tempStack.getLength()-1) == myVal2) {
 		        foundStack = tempStack;

@@ -32,6 +32,7 @@ ladder = function() {
 	var templen2;
 	var temparray;
 	var lastWord;
+	var count=0;
 	
 	var difCount = 0; //count of different letters in a word
 	
@@ -73,11 +74,10 @@ ladder = function() {
 	        difCount = 0;
           }
 		  firstStack.push(lastWord);
-		  insertItem(firstStack.svalues);
 		 for (var x = 0; x < myQ.getLength(); x++) {
 		    temp=myQ.values[x];
 			templen=myQ.values[x].length;
-			insertItem(temp);
+			//insertItem(temp);
 		    if (temp[templen-1] == myVal2) {
 		        foundStack.values = myQ.values[x];
 			    found = true;
@@ -93,6 +93,12 @@ ladder = function() {
 	     else {
 			 myQ.dequeue;
 	      }
+		count++;
+		if (count==5) {
+		   insertItem(myQ.values);
+		   insertItem(firstStack.values);
+		   reachedEnd=true;
+		}
 	   }
 	}
 }

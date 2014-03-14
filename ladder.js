@@ -57,7 +57,7 @@ ladder = function() {
 	            if (usedSet.doesNotContain(words[i])) {
                     firstStack = firstStack.push(words[i]);
 		            usedSet=usedSet.add(words[i]);
-		            myQ = myQ.queue(firstStack.svalues);
+		            myQ.queue(firstStack.svalues);
 					firstStack = firstStack.pop();
 		        }
 	        }

@@ -93,6 +93,8 @@ ladder = function() {
 	     }
 	     else {
 			 myQ.dequeue;
+			 templen=firstStack.svalues.length;
+			 runningValue=firstStack.svalues[templen-1];
 	      }
 		count++;
 		insertItem(firstStack.svalues);

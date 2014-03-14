@@ -102,7 +102,7 @@ ladder = function() {
 		if (count==5) {
 		   insertItem(myQ.values);
 		   insertItem(firstStack.svalues);
-		   reachedEnd=true;
+		   //reachedEnd=true;
 		}
 	   }
 	}

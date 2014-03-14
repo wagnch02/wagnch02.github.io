@@ -59,6 +59,9 @@ ladder = function() {
 		            usedSet=usedSet.add(words[i]);
 		            myQ = myQ.queue(firstStack);
 					tempStack=myQ.getItem(0);
+					for (var pp=0;pp<myQ.getLength();pp++){
+					   insertItem(tempStack.getItem(pp));
+					}
 					firstStack = firstStack.pop();
 		        }
 	        }
@@ -68,7 +71,7 @@ ladder = function() {
 		 //for (var x = 0; x < myQ.getLength(); x++) {
 	        
 			for (var j =0;j<length;j++) {
-			    insertItem(tempStack.getItem(j));
+			    //insertItem(tempStack.getItem(j));
 			}
 		    if (tempStack.getItem(tempStack.getLength()-1) == myVal2) {
 		        foundStack = tempStack;

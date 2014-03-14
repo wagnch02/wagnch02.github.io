@@ -99,6 +99,7 @@ ladder = function() {
 			 len3=tempval.length;
 			 firstStack.svalues.push(tempval[len3-1]);
 			 insertItem(firstStack.svalues);
+			 insertItem(myQ.values);
 	      }
 		  //reachedEnd=true;
 		  count=count+1;

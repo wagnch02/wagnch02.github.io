@@ -135,7 +135,7 @@ searchWords = function(currentWord, currentStack, wordLen, wordDict, usedWordSet
 		   stack = newStack;
 		   stack=stack.push(words[i]);
 		   usedSet=usedSet.add(words[i]);
-	       myQ = myQ.queue(stack);
+	       myQ = myQ.unshift(stack);
 		}
 	  }
 	  difCount = 0;

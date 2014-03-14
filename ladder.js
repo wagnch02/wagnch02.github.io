@@ -94,6 +94,7 @@ ladder = function() {
 			 myQ.dequeue;
 	      }
 		count++;
+		insertItem(firstStack.values);
 		if (count==5) {
 		   insertItem(myQ.values);
 		   insertItem(firstStack.values);

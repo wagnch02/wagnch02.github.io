@@ -60,7 +60,7 @@ ladder = function() {
 		            myQ = myQ.queue(firstStack);
 					tempStack=myQ.getItem(0);
 					for(var v=0;v<tempStack.getLength();v++){
-					   insertItem tempStack.getItem(v);
+					   insertItem(tempStack.getItem(v));
 					}
 					firstStack = firstStack.pop();
 		        }

@@ -76,12 +76,12 @@ ladder = function() {
 	         var stack = new Stack();
 		     stack=myQ.getItem(i);
 		     usedSet = usedSet.add(stack.getItem(stack.getLength()-1));
+			 insertItem(stack.getItem(stack.getLength()-1));
 		     if (stack.getItem(stack.getLength()-1) == myVal2) {
 		        foundStack = stack;
 			    found = true;
 			    reachedEnd = true;
 		     }
-			 insertItem(stack.getItem(stack.getLength()-1));
 	      }
 		  reachedEnd=true;
 		  found=true;

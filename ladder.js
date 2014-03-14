@@ -52,6 +52,7 @@ ladder = function() {
 	   usedSet.add(runningVal);
 	   firstStack.svalues.push(runningVal);
 	   while(reachedEnd == false) {
+	      insertItem(runningVal);
 	      for (var i = 0; i < words.length; i++) {
             for (var i2 = 0; i2 < length; i2++) {
 	            if (runningVal.charAt(i2) != words[i].charAt(i2)) {
@@ -94,7 +95,7 @@ ladder = function() {
 	     else {
 			 myQ.dequeue;
 			 templen=firstStack.svalues.length;
-			 runningValue=firstStack.svalues[templen-1];
+			 runningVal=firstStack.svalues[templen-1];
 	      }
 		count++;
 		insertItem(firstStack.svalues);

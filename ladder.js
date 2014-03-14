@@ -71,7 +71,7 @@ ladder = function() {
 	        difCount = 0;
           }
 		  firstStack.push(lastWord);
-		  insertItem(firstStack.getItem(2));
+		  insertItem(firstStack.svalues);
 		 for (var x = 0; x < myQ.getLength(); x++) {
 		    temp=myQ.values[x];
 			templen=myQ.values[x].length;

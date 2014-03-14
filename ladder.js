@@ -113,7 +113,7 @@ insertItem = function(value) {
 searchWords = function(currentWord, currentStack, wordLen, wordDict, usedWordSet, mqueue) {
    var myQ = new Queue();
    for (var j = mqueue.getLength()-1; j > -1; j--) {
-      myQ.queue(mqueue.getItem(j));
+      myQ = myQ.queue(mqueue.getItem(j));
 	  console.log(mqueue.getItem(j));
    }
    var length = wordLen;
@@ -131,14 +131,18 @@ searchWords = function(currentWord, currentStack, wordLen, wordDict, usedWordSet
 	    var usedSet = new Set();
         usedSet = usedWordSet;
 	    if (usedSet.doesNotContain(words[i])) {
+		   newQ = new Queue();
+		   for (var h = myQ.getLength()-1; h > -1; h--) {
+              newQ = newQ.queue(mQueue.getItem(h));   
+           }		   
 		   newStack=newStack.push(words[i]);
 		   usedSet=usedSet.add(words[i]);
-		   myQ = myQ.queue(newStack);
+		   newQ = newQ.queue(newStack);
 		}
 	  }
 	  difCount = 0;
    }
-   return myQ;
+   return newQ;
 }
 
 

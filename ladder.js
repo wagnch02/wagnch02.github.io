@@ -113,12 +113,12 @@ searchWords = function(currentWord, currentStack, wordLen, wordDict, usedWordSet
    var myQ = mqueue;
    var length = wordLen;
    var words = wordDict;
-   var runningVal = currentWord;
+   var runVal = currentWord;
    var usedSet = usedWordSet;
    var difCount = 0;
    for (var i = 0; i < words.length; i++) {
       for (var i2 = 0; i2 < length; i2++) {
-	     if (runningVal.charAt(i2) != words[i].charAt(i2)) {
+	     if (runVal.charAt(i2) != words[i].charAt(i2)) {
             difCount = difCount + 1;
          }
 	  }

@@ -111,13 +111,11 @@ insertItem = function(value) {
 }
 
 searchWords = function(currentWord, currentStack, wordLen, wordDict, usedWordSet, queue) {
-   var myQ = new Queue();
-   myQ = queue;
+   var myQ = queue;
    var length = wordLen;
    var words = wordDict;
    var runningVal = currentWord;
-   var newStack = new Stack();
-   newStack = currentStack;
+   var newStack = currentStack;
    var difCount = 0;
    for (var i = 0; i < words.length; i++) {
       for (var i2 = 0; i2 < length; i2++) {

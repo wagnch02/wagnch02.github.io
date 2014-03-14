@@ -100,10 +100,10 @@ ladder = function() {
 			 firstStack.svalues.push(tempval[len3-1]);
 			 insertItem(firstStack.svalues);
 	      }
-		  reachedEnd=true;
+		  //reachedEnd=true;
 		  count=count+1;
 		  if(count==2){
-		     reachedEnd=true;
+		     //reachedEnd=true;
 		  }
 	   }
 	}

@@ -73,15 +73,13 @@ ladder = function() {
 	   while(reachedEnd == false) {
 	      wordSet = new Set();
 		  wordSet = usedSet;
-	      checkQ = new Queue();
-		  checkQ = myQ;
 	      myQ = searchWords(runningVal, firstStack, length, words, wordSet, checkQ);
 		  for (var i = 0; i < myQ.getLength(); i++) {
-	         var stack = new Stack();
-		     stack = myQ.getItem(i);
+	         var mStack = new Stack();
+		     mStack = myQ.getItem(i);
 			 var al = new Stack();
-			 al = stack.getLength();
-			 al = al-1
+			 al = mStack.getLength();
+			 al = al-1;
 		     wordSet = usedSet.add(stack.getItem(al));
 		     if (stack.getItem(stack.getLength()-1) == myVal2) {
 		        foundStack = stack;

@@ -76,12 +76,9 @@ ladder = function() {
 	      myQ = searchWords(runningVal, firstStack, length, words, wordSet, myQ);
 		  for (var i = 0; i < myQ.getLength(); i++) {
 	         var stack = new Stack();
-		     stack = myQ.getItem(i);
-			 var al = new Stack();
-			 al = stack.length;
-			 al = al-1;
-		     wordSet = usedSet.add(stack[al]);
-		     if (stack[stack.length -1] == myVal2) {
+		     stack=stack.push(myQ.getItem(i));
+		     wordSet = usedSet.add(stack.getItem(stack.getLength()-1));
+		     if (stack.getItem(stack.getLength()-1) == myVal2) {
 		        foundStack = stack;
 			    found = true;
 			    reachedEnd = true;
@@ -97,7 +94,7 @@ ladder = function() {
 	         firstStack = new Stack();
 	         firstStack = myQ.getItem(myQ.getLength()-1);
 			 myQ = myQ.dequeue();
-		     runningVal = firstStack[firstStack.length -1];
+		     runningVal = firstStack.getItem(firstStack.getLength()-1);
 	      }
 	   }
 	}
@@ -114,7 +111,6 @@ searchWords = function(currentWord, currentStack, wordLen, wordDict, usedWordSet
    var myQ = new Queue();
    for (var j = mqueue.getLength()-1; j > -1; j--) {
       myQ = myQ.queue(mqueue.getItem(j));
-	  console.log(mqueue.getItem(j));
    }
    var length = wordLen;
    var words = wordDict;
@@ -130,19 +126,15 @@ searchWords = function(currentWord, currentStack, wordLen, wordDict, usedWordSet
 	  if (difCount == 1) {
 	    var usedSet = new Set();
         usedSet = usedWordSet;
-	    if (usedSet.doesNotContain(words[i])) {
-		   newQ = new Queue();
-		   for (var h = myQ.getLength()-1; h > -1; h--) {
-              newQ = newQ.queue(mQueue.getItem(h));   
-           }		   
+	    if (usedSet.doesNotContain(words[i])) {	   
 		   newStack=newStack.push(words[i]);
 		   usedSet=usedSet.add(words[i]);
-		   newQ = newQ.queue(newStack);
+		   myQ = myQ.queue(newStack);
 		}
 	  }
 	  difCount = 0;
    }
-   return newQ;
+   return myQ;
 }
 
 

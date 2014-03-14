@@ -4,17 +4,17 @@ Queue = function() {
 
     this.queue = function(item) {
 	   values.unshift(item);
-	   return values;
+	   return this;
     }
 	
 	this.dequeue = function(item) {
 	   values.pop();
-	   return values;
+	   return this;
 	}
 	
 	this.clear = function() {
 	   values.length=0;
-	   return values;
+	   return this;
 	}
 	
 	this.getItem = function(index) {

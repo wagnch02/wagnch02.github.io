@@ -57,28 +57,25 @@ ladder = function() {
 	            if (usedSet.doesNotContain(words[i])) {
                     firstStack = firstStack.push(words[i]);
 		            usedSet=usedSet.add(words[i]);
-					for(var bb=0;bb<firstStack.getLength();bb++){
-					   insertItem(firstStack.getItem(bb));
-					}
 		            myQ = myQ.queue(firstStack);
 					firstStack = firstStack.pop();
-					
 		        }
 	        }
 	        difCount = 0;
           }
-	    
-		 //for (var x = 0; x < myQ.getLength(); x++) {
+	      firstStack=myQ.getItem(0);
+		  insertItem(firstStack.getItem(1));
+		/* for (var x = 0; x < myQ.getLength(); x++) {
 	        
 			for (var j =0;j<length;j++) {
-			    //insertItem(tempStack.getItem(j));
+			    insertItem(tempStack.getItem(j));
 			}
 		    if (tempStack.getItem(tempStack.getLength()-1) == myVal2) {
 		        foundStack = tempStack;
 			    found = true;
 			    reachedEnd = true;
 		    }
-	     //}
+	     }*/
 	     if (found == true) {
 	         for (var p = 0; p < foundStack.getLength(); p++) {
 		        insertItem(foundStack.getItem(p));

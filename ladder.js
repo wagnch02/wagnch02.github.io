@@ -31,6 +31,7 @@ ladder = function() {
 	var templen;
 	var templen2;
 	var temparray;
+	var lastWord;
 	
 	var difCount = 0; //count of different letters in a word
 	
@@ -64,11 +65,12 @@ ladder = function() {
 					for (var hp=0;hp<firstStack.getLength();hp++){
 					   myQ.values[0].push(firstStack.getItem(hp));
 					}
-					firstStack.pop();
+					lastWord=firstStack.pop();
 		        }
 	        }
 	        difCount = 0;
           }
+		  firstStack.push(lastWord);
 		 for (var x = 0; x < myQ.getLength(); x++) {
 		    temp=myQ.values[x];
 			templen=myQ.values[x].length;
@@ -86,10 +88,6 @@ ladder = function() {
 			 }
 	     }
 	     else {
-		     templen=myQ.getLength();
-			 temparray=myQ.values[templen-1];
-			 templen2=temparray.length;
-	         firstStack.values.push(temparray[templen2-1]);
 			 myQ.dequeue;
 	      }
 	   }

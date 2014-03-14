@@ -66,7 +66,7 @@ ladder = function() {
 					   myQ.values[0].push(firstStack.getItem(hp));
 					}
 					templen=firstStack.svalues.length;
-					lastWord=fistStack.svalues[templen-1];
+					lastWord=firstStack.svalues[templen-1];
 					firstStack.pop();
 		        }
 	        }

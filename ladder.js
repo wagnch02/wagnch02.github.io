@@ -104,6 +104,7 @@ ladder = function() {
 			 runningVal=firstStack.svalues[templen-1];
 			 insertItem(myQ.values);
 	      }
+		  reachedEnd=true;
 		  count=count+1;
 		  if(count==2){
 		     reachedEnd=true;

@@ -56,11 +56,12 @@ ladder = function() {
 	        if (difCount == 1) {
 	            if (usedSet.doesNotContain(words[i])) {
                     firstStack = firstStack.push(words[i]);
-					for (var ff =0;ff<firstStack.getLength();ff++){
-					     insertItem(firstStack.getItem(ff));
-					   }
 		            usedSet=usedSet.add(words[i]);
 		            myQ = myQ.queue(firstStack);
+					tempStack=myQ.getItem(0);
+					for(var v=0;v<tempStack.getLength();v++){
+					   insertItem tempStack.getItem(v);
+					}
 					firstStack = firstStack.pop();
 		        }
 	        }

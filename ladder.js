@@ -59,6 +59,7 @@ ladder = function() {
 		            usedSet=usedSet.add(words[i]);
 		            myQ = myQ.queue(firstStack);
 					firstStack = firstStack.pop();
+					insertItem(words[i]);
 		        }
 	        }
 	        difCount = 0;

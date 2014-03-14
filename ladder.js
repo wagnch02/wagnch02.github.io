@@ -76,9 +76,9 @@ ladder = function() {
 	         var stack = new Stack();
 		     stack=myQ.getItem(i);
 		     usedSet = usedSet.add(stack.getItem(stack.getLength()-1));
-			 for (var j =0;j<length;j++) {
-			    insertItem(stack.getItem(j));
-			 }
+			 //for (var j =0;j<length;j++) {
+			    //insertItem(stack.getItem(j));
+			 //}
 		     if (stack.getItem(stack.getLength()-1) == myVal2) {
 		        foundStack = stack;
 			    found = true;
@@ -125,7 +125,8 @@ searchWords = function(currentWord, currentStack, wordLen, wordDict, usedWordSet
          }
 	  }
 	  if (difCount == 1) {
-	    if (usedSet.doesNotContain(words[i])) {	   
+	    if (usedSet.doesNotContain(words[i])) {	
+           insertItem(words[i]);		
 		   newStack=newStack.push(words[i]);
 		   usedSet=usedSet.add(words[i]);
 		   myQ = myQ.queue(newStack);

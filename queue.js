@@ -1,27 +1,27 @@
 Queue = function() {
 
-    var values = [];
+    this.values = [];
 
     this.queue = function(item) {
-	   values.unshift(item);
+	   this.values.unshift(item);
 	   return this;
     }
 	
 	this.dequeue = function(item) {
-	   values.pop();
+	   this.values.pop();
 	   return this;
 	}
 	
 	this.clear = function() {
-	   values.length=0;
+	   this.values.length=0;
 	   return this;
 	}
 	
 	this.getItem = function(index) {
-	   return values[index];
+	   return this.values[index];
 	}
 	
 	this.getLength = function() {
-	   return values.length;
+	   return this.values.length;
 	}
 }

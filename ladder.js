@@ -80,7 +80,8 @@ ladder = function() {
 	         var stack = new Stack();
 		     stack = myQ.getItem(i);
 			 var al = new Stack();
-			 al = stack.getLength()-1;
+			 al = stack.getLength();
+			 al = al-1
 		     wordSet = usedSet.add(stack.getItem(al));
 		     if (stack.getItem(stack.getLength()-1) == myVal2) {
 		        foundStack = stack;

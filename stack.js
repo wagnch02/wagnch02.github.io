@@ -1,27 +1,27 @@
 Stack = function() {
 
-    var values = [];
+    this.svalues = [];
 
     this.push = function(item) {
-	   values.push(item);
+	   this.svalues.push(item);
 	   return this;
     }
 	
 	this.pop = function(item) {
-	   values.pop();
+	   this.svalues.pop();
 	   return this;
 	}
 	
 	this.clear = function() {
-	   values.length=0;
+	   this.svalues.length=0;
 	   return this;
 	}
 	
 	this.getItem = function(index) {
-	   return values[index];
+	   return this.svalues[index];
 	}
 	
 	this.getLength = function() {
-	   return values.length;
+	   return this.svalues.length;
 	}
 }

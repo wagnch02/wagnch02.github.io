@@ -57,15 +57,14 @@ ladder = function() {
 	            if (usedSet.doesNotContain(words[i])) {
                     firstStack = firstStack.push(words[i]);
 		            usedSet=usedSet.add(words[i]);
-		            myQ = myQ.queue(firstStack);
+		            myQ = myQ.queue(firstStack.svalues);
+					insertItem(firstStack.svalues);
 					firstStack = firstStack.pop();
 		        }
 	        }
 	        difCount = 0;
           }
-	      firstStack=myQ.getItem(0);
-		  insertItem(firstStack.getItem(1));
-		/* for (var x = 0; x < myQ.getLength(); x++) {
+		 for (var x = 0; x < myQ.getLength(); x++) {
 	        
 			for (var j =0;j<length;j++) {
 			    insertItem(tempStack.getItem(j));
@@ -75,7 +74,7 @@ ladder = function() {
 			    found = true;
 			    reachedEnd = true;
 		    }
-	     }*/
+	     }
 	     if (found == true) {
 	         for (var p = 0; p < foundStack.getLength(); p++) {
 		        insertItem(foundStack.getItem(p));

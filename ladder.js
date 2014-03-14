@@ -67,15 +67,17 @@ ladder = function() {
 				    count++;
                     firstStack.svalues.push(words[i]);
 		            usedSet.add(words[i]);
-<<<<<<< HEAD
 		            myQ.values.push([firstStack.svalues]);
-=======
 		            myQ.queue([]);
->>>>>>> parent of 617888b... a
 					//insertItem(words[i]);
-					//for (var hp=1;hp<firstStack.getLength();hp++){
-					   //myQ.values[0].push(firstStack.getItem(hp));
-					//}
+					for (var hp=1;hp<firstStack.getLength();hp++){
+					   myQ.values[0].push(firstStack.getItem(hp));
+					}
+		            myQ.values.unshift([]);
+					//insertItem(words[i]);
+					for (var hp=0;hp<firstStack.getLength();hp++){
+					   myQ.values[0].push(firstStack.getItem(hp));
+					}
 					templen=firstStack.svalues.length;
 					firstStack.svalues.pop();
 		        }

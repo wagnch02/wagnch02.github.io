@@ -115,7 +115,6 @@ searchWords = function(currentWord, currentStack, wordLen, wordDict, usedWordSet
    var length = wordLen;
    var words = wordDict;
    var runningVal = currentWord;
-   var newStack = currentStack;
    var usedSet = usedWordSet;
    var difCount = 0;
    for (var i = 0; i < words.length; i++) {
@@ -125,11 +124,11 @@ searchWords = function(currentWord, currentStack, wordLen, wordDict, usedWordSet
          }
 	  }
 	  if (difCount == 1) {
-	    if (usedSet.doesNotContain(words[i])) {	
-           insertItem(words[i]);		
-		   newStack=newStack.push(words[i]);
+	    if (usedSet.doesNotContain(words[i])) {
+           nStack = currentStack;
+           nStack = nStack.push(words[i]);
 		   usedSet=usedSet.add(words[i]);
-		   myQ = myQ.queue(newStack);
+		   myQ = myQ.queue(nStack);
 		}
 	  }
 	  difCount = 0;

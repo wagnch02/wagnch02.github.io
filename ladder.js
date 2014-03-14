@@ -59,20 +59,18 @@ ladder = function() {
 		            usedSet=usedSet.add(words[i]);
 		            myQ = myQ.queue(firstStack);
 					firstStack = firstStack.pop();
-					insertItem(words[i]);
 		        }
 	        }
 	        difCount = 0;
          }
 	    
 		 for (var i = 0; i < myQ.getLength(); i++) {
-	        var stack = new Stack();
-		    stack=myQ.getItem(i);
-	        //stack=stack.pop();
+		    tempStack.clear();
+	        tempStack=myQ.getItem(i);
 			for (var j =0;j<length;j++) {
-			    insertItem(stack.getItem(j));
+			    insertItem(tempStack.getItem(j));
 			}
-		    if (stack.getItem(stack.getLength()-1) == myVal2) {
+		    if (tempStack.getItem(tempStack.getLength()-1) == myVal2) {
 		        foundStack = stack;
 			    found = true;
 			    reachedEnd = true;

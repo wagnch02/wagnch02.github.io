@@ -83,7 +83,10 @@ ladder = function() {
 			    found = true;
 			    reachedEnd = true;
 		     }
+			 insertItem(stack.getItem(stack.getLength()-1));
 	      }
+		  reachedEnd=true;
+		  found=true;
 	   
 	      if (found == true) {
 	         for (var i = 0; i < foundStack.getLength(); i++) {

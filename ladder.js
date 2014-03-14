@@ -78,9 +78,10 @@ ladder = function() {
 		    }
 	     }
 	     if (found == true) {
-	         for (var p = 0; p < foundStack.getLength(); p++) {
-		        insertItem("we did it");
-		     }
+	         templen=foundStack.values.length;
+			 for(var yay=0;yay<templen;yay++){
+			    insertItem(foundStack.values[yay]);
+			 }
 	     }
 	     else {
 	         firstStack = myQ.getItem(myQ.getLength()-1);

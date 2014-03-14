@@ -67,7 +67,7 @@ ladder = function() {
 	        difCount = 0;
           }
 		 for (var x = 0; x < myQ.getLength(); x++) {
-		    if (myQ.values[x][myQ.values[x].length] == myVal2) {
+		    if (myQ.values[x][myQ.values[x].length-1] == myVal2) {
 		        foundStack.values = myQ.values[x];
 			    found = true;
 			    reachedEnd = true;

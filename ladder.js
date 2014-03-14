@@ -96,7 +96,8 @@ ladder = function() {
 	     }
 	     else {
 			 tempval=myQ.values.pop();
-			 firstStack.svalues.push(tempval);
+			 len3=tempval.length;
+			 firstStack.svalues.push(tempval[len3-1]);
 			 insertItem(firstStack.svalues);
 	      }
 		  reachedEnd=true;

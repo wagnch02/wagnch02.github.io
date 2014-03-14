@@ -27,7 +27,8 @@ ladder = function() {
 	var firstStack = new Stack();
 	var tempStack = new Stack();
 	var words = [];
-	var count=0;
+	var temp;
+	var templen;
 	
 	var difCount = 0; //count of different letters in a word
 	
@@ -67,7 +68,10 @@ ladder = function() {
 	        difCount = 0;
           }
 		 for (var x = 0; x < myQ.getLength(); x++) {
-		    if (myQ.values[x][myQ.values[x].length-1] == myVal2) {
+		    temp=myQ.values[x];
+			templen=myQ.values[x].length;
+			insertItem(temp[templen-1]);
+		    if (temp[templen-1] == myVal2) {
 		        foundStack.values = myQ.values[x];
 			    found = true;
 			    reachedEnd = true;

@@ -100,7 +100,8 @@ ladder = function() {
 			 //tempval=myQ.values[len3-1];
 			 //len4=tempval.length;
 			 //firstStack.svalues.push(tempval[len4-1]);
-			 myQ.values.pop();
+			 tempval=myQ.values.pop();
+			 insertItem(tempval);
 			 //templen=firstStack.svalues.length;
 			 //runningVal=firstStack.svalues[templen-1];
 			 insertItem(myQ.values);

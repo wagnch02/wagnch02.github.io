@@ -26,7 +26,7 @@ ladder = function() {
 	var usedSet = new Set();
 	var myQ = new Queue();
 	var firstStack = new Stack();
-	
+	var tempStack = new Stack();
 	var words = [];
 	
 	var difCount = 0; //count of different letters in a word
@@ -46,61 +46,55 @@ ladder = function() {
 	if (myVal.length == length && myVal2.length == length) {
 	   usedSet=usedSet.add(runningVal);
 	   firstStack=firstStack.push(runningVal);
-	   /*
-	   myQ = searchWords(runningVal, myStack, length, words, usedSet, myQ);
-	   for (var i = 0; i < myQ.getLength(); i++) {
-	      var stack = new Stack();
-		  stack = myQ.getItem(i);
-		  usedSet.add(stack.getItem(stack.getLength()-1));
-		  if (stack.getItem(stack.getLength()-1) == myVal2) {
-		     foundStack = stack;
-			 found = true;
-			 reachedEnd = true;
-		  }
-	   }
-	   
-	   if (found == true) {
-	      for (var i = 0; i < foundStack.getLength(); i++) {
-		     insertItem(foundStack.getItem(i));
-		  }
-	   }
-	   else {
-	      firstStack = new Stack();
-	      firstStack = myQ.getItem(myQ.getLength()-1);
-		  myQ = myQ.dequeue();
-		  runningVal = firstStack.getItem(firstStack.getLength()-1);
-	   } */
 	   while(reachedEnd == false) {
-	      myQ = searchWords(runningVal, firstStack, length, words, usedSet, myQ);
-		  for (var i = 0; i < myQ.getLength(); i++) {
-	         var stack = new Stack();
-		     stack=myQ.getItem(i);
-			 stack=stack.pop();
-		     usedSet = usedSet.add(stack.getItem(stack.getLength()-1));
-			 for (var j =0;j<length;j++) {
+	      for (var i = 0; i < words.length; i++) {
+            for (var i2 = 0; i2 < length; i2++) {
+	            if (runningVal.charAt(i2) != words[i].charAt(i2)) {
+                   difCount = difCount + 1;
+                }
+	        }
+	        if (difCount == 1) {
+	            if (usedSet.doesNotContain(words[i])) {
+                    tempStack = tempStack.clear();
+		            for (var g = 0; g < currentStack.getLength(); g++) {
+		               tempStack=tempStack.push(currentStack.getItem(g));
+		            }
+                    tempStack = tempStack.push(words[i]);
+		            usedSet=usedSet.add(words[i]);
+		            myQ = myQ.queue(tempStack);
+		        }
+	        }
+	        difCount = 0;
+         }
+	    
+		 for (var i = 0; i < myQ.getLength(); i++) {
+	        var stack = new Stack();
+		    stack=myQ.getItem(i);
+	        //stack=stack.pop();
+			for (var j =0;j<length;j++) {
 			    insertItem(stack.getItem(j));
-			 }
-		     if (stack.getItem(stack.getLength()-1) == myVal2) {
+			}
+		    if (stack.getItem(stack.getLength()-1) == myVal2) {
 		        foundStack = stack;
 			    found = true;
 			    reachedEnd = true;
-		     }
-	      }
-	      if (found == true) {
+		    }
+	     }
+	     if (found == true) {
 	         for (var i = 0; i < foundStack.getLength(); i++) {
 		        insertItem(foundStack.getItem(i));
 		     }
-	      }
-	      else {
-	         firstStack = new Stack();
+	     }
+	     else {
+	         firstStack = firstStack.clear();
 	         firstStack = myQ.getItem(myQ.getLength()-1);
 			 firstStack=firstStack.pop();
 			 myQ = myQ.dequeue();
 		     runningVal = firstStack.getItem(firstStack.getLength()-1);
 			 //insertItem(runningVal);
-			 for (var xx = 0; xx < firstStack.getLength(); xx++) {
+			 //for (var xx = 0; xx < firstStack.getLength(); xx++) {
 			   //insertItem(firstStack.getItem(xx));
-			 }
+			// }
 			 
 			 found = true;///////////////////delete later
 		     reachedEnd = true;//////////////////delete later
@@ -115,37 +109,5 @@ insertItem = function(value) {
    li.innerHTML = value;
    ul.appendChild(li);
 }
-
-searchWords = function(currentWord, currentStack, wordLen, wordDict, usedWordSet, mqueue) {
-   var myQ = mqueue;
-   var length = wordLen;
-   var words = wordDict;
-   var runVal = currentWord;
-   var usedSet = usedWordSet;
-   var difCount = 0;
-   for (var i = 0; i < words.length; i++) {
-      for (var i2 = 0; i2 < length; i2++) {
-	     //insertItem(runVal);
-		 //insertItem(words[i]);
-	     if (runVal.charAt(i2) != words[i].charAt(i2)) {
-            difCount = difCount + 1;
-         }
-	  }
-	  if (difCount == 1) {
-	    if (usedSet.doesNotContain(words[i])) {
-           nStack = new Stack();
-		   for (var g = 0; g < currentStack.getLength(); g++) {
-		      nStack=nStack.push(currentStack.getItem(g));
-		   }
-           nStack = nStack.push(words[i]);
-		   usedSet=usedSet.add(words[i]);
-		   myQ = myQ.queue(nStack);
-		}
-	  }
-	  difCount = 0;
-   }
-   return myQ;
-}
-
 
 window.onload = hello

@@ -63,10 +63,10 @@ ladder = function() {
 		        }
 	        }
 	        difCount = 0;
-         }
+          }
 	    
 		 //for (var x = 0; x < myQ.getLength(); x++) {
-	        tempStack=myQ.getItem(0);
+	        
 			for (var j =0;j<length;j++) {
 			    insertItem(tempStack.getItem(j));
 			}

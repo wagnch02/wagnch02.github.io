@@ -33,6 +33,9 @@ ladder = function() {
 	var temparray;
 	var lastWord;
 	var count=0;
+	var len3;
+	var len4;
+	var tempval;
 	
 	var difCount = 0; //count of different letters in a word
 	
@@ -61,6 +64,7 @@ ladder = function() {
 	        }
 	        if (difCount == 1) {
 	            if (usedSet.doesNotContain(words[i])) {
+				    count++;
                     firstStack.svalues.push(words[i]);
 		            usedSet.add(words[i]);
 		            myQ.queue([]);
@@ -69,13 +73,11 @@ ladder = function() {
 					   myQ.values[0].push(firstStack.getItem(hp));
 					}
 					templen=firstStack.svalues.length;
-					lastWord=firstStack.svalues[templen-1];
 					firstStack.svalues.pop();
 		        }
 	        }
 	        difCount = 0;
           }
-		  firstStack.svalues.push(lastWord);
 		 for (var x = 0; x < myQ.getLength(); x++) {
 		    temp=myQ.values[x];
 			templen=myQ.values[x].length;
@@ -93,10 +95,15 @@ ladder = function() {
 			 }
 	     }
 	     else {
+		     len3=myQ.values.length;
+			 tempval=myQ.values[len3-1];
+			 len4=tempval.length;
+			 firstStack.svalues.push(tempval[len4-1]);
 			 myQ.dequeue;
 			 templen=firstStack.svalues.length;
 			 runningVal=firstStack.svalues[templen-1];
-	      }
+			 insertItem(myQ.values);
+	      } 
 	   }
 	}
 }

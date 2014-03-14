@@ -22,7 +22,6 @@ ladder = function() {
 	var runningVal = myVal;
 	var found = false;
 	var reachedEnd = false;
-	
 	var usedSet = new Set();
 	var myQ = new Queue();
 	var firstStack = new Stack();
@@ -44,8 +43,8 @@ ladder = function() {
 	}
 	
 	if (myVal.length == length && myVal2.length == length) {
-	   usedSet=usedSet.add(runningVal);
-	   firstStack=firstStack.push(runningVal);
+	   usedSet.add(runningVal);
+	   firstStack.push(runningVal);
 	   while(reachedEnd == false) {
 	      for (var i = 0; i < words.length; i++) {
             for (var i2 = 0; i2 < length; i2++) {
@@ -55,10 +54,10 @@ ladder = function() {
 	        }
 	        if (difCount == 1) {
 	            if (usedSet.doesNotContain(words[i])) {
-                    firstStack = firstStack.push(words[i]);
-		            usedSet=usedSet.add(words[i]);
-		            myQ.queue(firstStack.svalues);
-					//firstStack = firstStack.pop();
+                    firstStack.push(words[i]);
+		            usedSet.add(words[i]);
+		            myQ.queue(firstStack);
+					firstStack.pop();
 		        }
 	        }
 	        difCount = 0;

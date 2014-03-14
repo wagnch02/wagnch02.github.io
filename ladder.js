@@ -70,11 +70,11 @@ ladder = function() {
 		 for (var x = 0; x < myQ.getLength(); x++) {
 		    temp=myQ.values[x];
 			templen=myQ.values[x].length;
-			insertItem(temp[templen-1]);
 		    if (temp[templen-1] == myVal2) {
 		        foundStack.values = myQ.values[x];
 			    found = true;
 			    reachedEnd = true;
+				insertItem("almost");
 		    }
 	     }
 	     if (found == true) {

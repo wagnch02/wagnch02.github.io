@@ -95,13 +95,13 @@ ladder = function() {
 			 }
 	     }
 	     else {
-		     len3=myQ.values.length;
-			 tempval=myQ.values[len3-1];
-			 len4=tempval.length;
-			 firstStack.svalues.push(tempval[len4-1]);
+		     //len3=myQ.values.length;
+			 //tempval=myQ.values[len3-1];
+			 //len4=tempval.length;
+			 //firstStack.svalues.push(tempval[len4-1]);
 			 myQ.dequeue;
-			 templen=firstStack.svalues.length;
-			 runningVal=firstStack.svalues[templen-1];
+			 //templen=firstStack.svalues.length;
+			 //runningVal=firstStack.svalues[templen-1];
 			 insertItem(myQ.values);
 	      }
 		  reachedEnd=true;

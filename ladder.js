@@ -50,7 +50,7 @@ ladder = function() {
 	
 	if (myVal.length == length && myVal2.length == length) {
 	   usedSet.add(runningVal);
-	   firstStack.values[0] = runningVal;
+	   firstStack.svalues.push(runningVal);
 	   while(reachedEnd == false) {
 	      for (var i = 0; i < words.length; i++) {
             for (var i2 = 0; i2 < length; i2++) {
@@ -60,7 +60,7 @@ ladder = function() {
 	        }
 	        if (difCount == 1) {
 	            if (usedSet.doesNotContain(words[i])) {
-                    firstStack.values.push(words[i]);
+                    firstStack.svalues.push(words[i]);
 		            usedSet.add(words[i]);
 		            myQ.queue([]);
 					for (var hp=0;hp<firstStack.getLength();hp++){
@@ -68,12 +68,12 @@ ladder = function() {
 					}
 					templen=firstStack.svalues.length;
 					lastWord=firstStack.svalues[templen-1];
-					firstStack.values.pop();
+					firstStack.svalues.pop();
 		        }
 	        }
 	        difCount = 0;
           }
-		  firstStack.values.push(lastWord);
+		  firstStack.svalues.push(lastWord);
 		 for (var x = 0; x < myQ.getLength(); x++) {
 		    temp=myQ.values[x];
 			templen=myQ.values[x].length;
@@ -94,10 +94,10 @@ ladder = function() {
 			 myQ.dequeue;
 	      }
 		count++;
-		insertItem(firstStack.values);
+		insertItem(firstStack.svalues);
 		if (count==5) {
 		   insertItem(myQ.values);
-		   insertItem(firstStack.values);
+		   insertItem(firstStack.svalues);
 		   reachedEnd=true;
 		}
 	   }

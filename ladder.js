@@ -114,7 +114,7 @@ searchWords = function(currentWord, currentStack, wordLen, wordDict, usedWordSet
    var myQ = new Queue();
    for (var j = mqueue.getLength()-1; j > -1; j--) {
       myQ.queue(mqueue.getItem(j));
-	  insertItem(mqueue.getItem(j));
+	  console.log(mqueue.getItem(j));
    }
    var length = wordLen;
    var words = wordDict;

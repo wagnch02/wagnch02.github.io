@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <script src="https://cdn.firebase.com/js/client/2.2.3/firebase.js"></script>
 	<meta name="viewport" content="width=320, initial-scale=1"/>
-	<title>jsmpeg streaming</title>
+	<title>WagsCam</title>
 	<style type="text/css">
 		body {
 			background: #FFF;
@@ -15,9 +16,16 @@
 			width: 640px;
 			height: 480px;
 		}
+		#honkButton {
+
+		}
+		#stopButton {
+
+		}
 	</style>
 </head>
 <body>
+	<div>
     <p> WagsCam </p>
 	<!-- The Canvas size specified here is the "initial" internal resolution. jsmpeg will
 		change this internal resolution to whatever the source provides. The size the
@@ -42,6 +50,28 @@
 		// Setup the WebSocket connection and start the player
 		var client = new WebSocket( 'ws://162.209.84.145:8084/' );
 		var player = new jsmpeg(client, {canvas:canvas});
+	</script>
+	</div>
+	<div>
+	<button id="upButton" type="button" onclick="moveClick('UP')">Up</button>
+	</div>
+	<div>
+	<button id="leftButton" type="button" onclick="moveClick('LEFT')">Left</button>
+	<button id="honkButton" type="button" onclick="moveClick('HONK')">Honk</button>
+	<button id="rightButton" type="button" onclick="moveClick('RIGHT')">Right</button>
+	</div>
+	<div>
+	<button id="backButton" type="button" onclick="moveClick('BACK')">Back</button>
+	<button id="stopButton" type="button" onclick="moveClick('STOP')">Stop</button>
+	</div>
+
+	<script type="text/javascript">
+	function moveClick(dir) {
+    	var myFirebaseRef = new Firebase("https://shifttest.firebaseio.com/");
+    	var messageRef = myFirebaseRef.child("message");
+    	messageRef.update({"1":dir});
+    	//this changes the RobotMaster firebase command
+	}
 	</script>
 </body>
 </html>
